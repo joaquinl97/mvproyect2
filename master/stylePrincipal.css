@@ -1,0 +1,284 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main{
+    background-color: rgba(2, 2, 2, 0.671);
+    width: 100%;
+    /*   font-family: 'Open Sans', sans-serif; */
+    /* font-family: 'Square Peg', cursive;   ESTE ES PARA TITULOS */
+}
+/* ------------------------------- CAROUSEL DE LA PORTADA PRINCIPAL MOVIE ---------------------------------*/
+.principal-movie{
+    font-size: 16px;
+    min-height: 40.62em;
+    color: white;
+    background: url(../master/img/moonlightfondo.jpg);
+    background-position: center center;
+    background-size: cover;
+    margin-bottom: 3.12em;
+    display: flex; /* para posicionar los textos abajo */
+    align-items: end;
+}
+.text-top{
+    background-color: rgba(0, 0, 0, 0.219);
+    margin-bottom: 6.25em;
+    margin-left: 2.0em;
+    margin-right: 2.0em;
+}
+.text-top h1{
+    font-family: 'Square Peg', cursive;
+    font-weight: 600;
+    font-size: 3,12em;
+    margin-bottom: 0.4em;
+}
+.text-top p{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: normal;
+    font-size: 1em;
+    line-height: 1.75em;
+    max-width: 50%;
+    margin-bottom: 1.25em;
+}
+.button-play{
+    background-color: rgba(255, 255, 255, 0.178);
+    border: none;
+    border-radius: 0.31em;
+    padding: 0.3em;
+    color: white;
+    margin-right: 1.25em;
+    cursor: pointer;
+    transition: .3s ease all;
+    font-size: 1.12em;
+}
+.button-play:hover{
+    background: rgba(0, 0, 0, 0.548);
+}
+/* -------------------- SUBTITULO FUERA DE LA PORTADA -------------------*/
+.last-launch{
+    color: white;
+    width: 95%;
+    margin: auto;
+    margin-bottom: 30px;
+}
+/* -------------------- CONTENEDOR DE TITULOS Y CONTROLES ---------------*/
+.container-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+.container-title h4{
+    color: #fff;
+    font-size: 20px;
+}
+.indicators button{                 /* estos son los que estan con javascript */
+    background: white;
+    height: 3px;
+    width: 10px;
+    cursor: pointer;
+    border: none;
+    margin-right: 2px;
+}
+.indicators button:hover, .indicators button.activo{
+    background: red;
+}
+/*------------------------- COMIENZA EL SLIDER DE LAS PELICULAS - CONTENEDOR PRINCIPAL Y FLECHAS ------------------------*/
+.main-container{
+    width: 95%;
+    margin: auto;
+    margin-bottom: 70px;
+}
+.main-container-slider{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.left-arrow, .right-arrow{
+    position: absolute;
+    border: none;
+    background-color: rgba(0,0,0,0.3);
+    font-size: 40px;
+    height: 50%;
+    width: 50px;
+    top: calc(50% - 25%);
+    line-height: 40px;
+    color: white;
+    cursor: pointer;
+    z-index: 500;    /* es para que quede por arriba de las imagenes  */
+    transition: .2s ease all;
+}
+.left-arrow:hover, .right-arrow:hover{
+    background-color: rgba(212, 208, 208, 0.322);
+}
+.left-arrow{
+    left: 0;
+}
+.right-arrow{
+    right: 0;
+}
+/* --------------------- CONTENEDOR DEL SLIDER/CAROUSEL DE PELICULAS ---------------------------*/
+.container-slider{
+    width: 100%;
+    padding: 10px 0;
+    overflow: hidden;
+    scroll-behavior: smooth;     /* para evitar que la pantalla suba para arriba al hacer click en las imagenes */
+}
+.slider{
+    display: flex;
+    flex-wrap: nowrap;
+}
+.movies{
+    padding: 3px;
+    min-width: 20%;
+    transition: .2s ease all;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+}    
+.movies.hover{
+    transform: scale(1.2);   /* para que no se agrande apenas ponga el cursor arriba, si no que lo haga progresivo */
+    transform-origin: center; /* para que se agrande desde el centro */
+}
+.movies img{
+    width: 100%;
+    vertical-align: top;
+}    
+
+
+
+/* ------------------------- MEDIA QUERIES -----------------------------*/
+@media screen and (max-width: 800px) {
+
+    .principal-movie{
+        font-size: 14px;
+    }
+    .text-top p{
+        max-width: 100%;
+    }
+    /* ---- EN VEZ DE HACER RESPONSIVE EL CAROUSEL LO TRANSFORME A UNA GRID CON TODAS LAS OMAGENES DESPLEGADAS */
+    .container-slider{
+        overflow: visible;
+    }
+    .slider{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+    .indicators, .left-arrow, .right-arrow{
+        display: none;
+    }
+}
+
+/* ----------------------- PAGINA ERROR 404 ---------------------- */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a;
+}
+
+.container404 {
+    position: fixed;
+    top: 4em;
+    width: 100%;
+    text-align: center;
+
+}
+
+.container404-img {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+
+}
+
+.container404-img img {
+    width: 300px;
+    display: block;
+    -webkit-animation: animates 2s linear infinite alternate;
+    animation: animates 2s linear infinite alternate;
+
+}
+
+.container404-img p {
+    position: absolute;
+    font-size: 5.5rem;
+    font-family: 'Gill Sans', sans-serif;
+    font-weight: 600;
+    top: 9rem;
+    color: rgba(255, 255, 255, 0.5);
+    -webkit-animation: animatestext 2s linear infinite alternate;
+    animation: animatestext 2s linear infinite alternate;
+}
+
+.containerDescription p {
+    color: #ffffff;
+    width: 50%;
+    margin: 2em auto;
+    font-family: 'Gill Sans', sans-serif;
+}
+
+.containerDescription a{
+    background-color: #0077d8f4;
+    color: #ffffff;
+    font-weight: 600;
+    font-family: 'Gill Sans', sans-serif;
+    padding: 0.8em 1em;
+    border-radius: 50px;
+    text-decoration: none;
+}
+
+@-webkit-keyframes animates {
+    0% {
+        -webkit-transform: translateX(5%);
+        transform: translateX(5%);
+    }
+
+    100% {
+        -webkit-transform: translateX(-5%);
+        transform: translateX(-5%);
+    }
+}
+
+@keyframes animates {
+    0% {
+        -webkit-transform: translateX(5%);
+        transform: translateX(5%);
+    }
+
+    100% {
+        -webkit-transform: translateX(-5%);
+        transform: translateX(-5%);
+    }
+
+}
+
+@-webkit-keyframes animatestext {
+    0% {
+        -webkit-transform: rotate(5deg);
+        transform: rotate(5deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(-5deg);
+        transform: rotate(-5deg);
+    }
+}
+
+@keyframes animatestext {
+    0% {
+        -webkit-transform: rotate(5deg);
+        transform: rotate(5deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(-5deg);
+        transform: rotate(-5deg);
+    }
+}
+
