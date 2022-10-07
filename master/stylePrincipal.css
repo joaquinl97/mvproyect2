@@ -4,16 +4,27 @@
     box-sizing: border-box;
 }
 main{
-    background-color: rgba(2, 2, 2, 0.671);
+    background-color: rgb(113, 79, 126);
     width: 100%;
     /*   font-family: 'Open Sans', sans-serif; */
     /* font-family: 'Square Peg', cursive;   ESTE ES PARA TITULOS */
+}
+/* Boton para subir desde abajo para arriba del todo */
+.go-up{
+	padding:20px;
+	background:rgba(248, 237, 227, 0.568);
+	font-size:20px;
+	color:#fff;
+	cursor:pointer;
+	position: fixed;
+    bottom:20px;
+	right:20px;
 }
 /* ------------------------------- CAROUSEL DE LA PORTADA PRINCIPAL MOVIE ---------------------------------*/
 .principal-movie{
     font-size: 16px;
     min-height: 40.62em;
-    color: white;
+    color:  rgb(248, 237, 227);
     background: url(../master/img/moonlightfondo.jpg);
     background-position: center center;
     background-size: cover;
@@ -57,32 +68,26 @@ main{
 }
 /* -------------------- SUBTITULO FUERA DE LA PORTADA -------------------*/
 .last-launch{
-    color: white;
+    color: rgb(248, 237, 227);
     width: 95%;
     margin: auto;
     margin-bottom: 30px;
 }
 /* -------------------- CONTENEDOR DE TITULOS Y CONTROLES ---------------*/
-.container-title{
-    display: flex;
-    justify-content: space-between;
-    align-items: end;
-}
+
 .container-title h4{
-    color: #fff;
+    color: rgb(248, 237, 227);
     font-size: 20px;
 }
 .indicators button{                 /* estos son los que estan con javascript */
-    background: white;
+    background: rgb(248, 237, 227);
     height: 3px;
     width: 10px;
     cursor: pointer;
     border: none;
     margin-right: 2px;
 }
-.indicators button:hover, .indicators button.activo{
-    background: red;
-}
+
 /*------------------------- COMIENZA EL SLIDER DE LAS PELICULAS - CONTENEDOR PRINCIPAL Y FLECHAS ------------------------*/
 .main-container{
     width: 95%;
@@ -103,7 +108,7 @@ main{
     width: 50px;
     top: calc(50% - 25%);
     line-height: 40px;
-    color: white;
+    color: rgb(248, 237, 227);
     cursor: pointer;
     z-index: 500;    /* es para que quede por arriba de las imagenes  */
     transition: .2s ease all;
@@ -119,6 +124,12 @@ main{
 }
 /* --------------------- CONTENEDOR DEL SLIDER/CAROUSEL DE PELICULAS ---------------------------*/
 .container-slider{
+    width: 100%;
+    padding: 10px 0;
+    overflow: hidden;
+    scroll-behavior: smooth;     /* para evitar que la pantalla suba para arriba al hacer click en las imagenes */
+}
+.container-slider2{
     width: 100%;
     padding: 10px 0;
     overflow: hidden;
@@ -142,7 +153,20 @@ main{
     width: 100%;
     vertical-align: top;
 }    
-
+/* ------------ Trailer ------------ */
+.trailer {
+    width: 95%;
+    margin: auto;
+    margin-bottom: 70px;
+}
+.trailer h4{
+    font-size: 20px;
+    color: rgb(248, 237, 227);
+}
+.trailer-video{
+    width: 100%;
+    margin-bottom: 50px;
+}
 
 
 /* ------------------------- MEDIA QUERIES -----------------------------*/
@@ -172,9 +196,9 @@ main{
 body {
     margin: 0;
     padding: 0;
-    background-color: #1a1a1a;
+    background-color: rgb(125, 110, 131)
 }
-
+/* #1a1a1a; */
 .container404 {
     position: fixed;
     top: 4em;
@@ -217,21 +241,22 @@ body {
 }
 
 .containerDescription p {
-    color: #ffffff;
+    color: rgb(248, 237, 227);
     width: 50%;
     margin: 2em auto;
     font-family: 'Gill Sans', sans-serif;
 }
 
 .containerDescription a{
-    background-color: #0077d8f4;
-    color: #ffffff;
+    background-color: rgb(208, 184, 168);
+    color: rgb(248, 237, 227);
     font-weight: 600;
     font-family: 'Gill Sans', sans-serif;
     padding: 0.8em 1em;
     border-radius: 50px;
     text-decoration: none;
 }
+/* #0077d8f4; */
 
 @-webkit-keyframes animates {
     0% {

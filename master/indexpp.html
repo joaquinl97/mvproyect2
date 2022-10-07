@@ -28,6 +28,8 @@
       href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&family=Open+Sans:wght@400;600&family=Square+Peg&display=swap"
       rel="stylesheet"
     />
+    <script src="http://code.jquery.com/jquery-latest.js"></script>   <!-- para el JS de las flechas del slider -->
+
   </head>
 
   <body>
@@ -35,23 +37,32 @@
 
     <!-- PAGINA PRINCIPAL -->
     <main>
+      <!-- BOTON PARA SUBIR ARRIBA -->
+      <div class="go-up">
+        <i class="fa-solid fa-angle-up"></i>
+      </div>
       <!-- carousel portada -->
       <div class="principal-movie">
         <div class="text-top">
           <h3>Moonlight</h3>
           <p>
-            Chiron es un joven afroamericano con una difícil infancia y adolescencia, 
-            que crece en una zona conflictiva de Miami. A medida que pasan los años, 
-            el joven se descubre a sí mismo intentando sobrevivir en diferentes situaciones. 
-            Durante todo ese tiempo, Chirón tendrá que hacer frente a la drogadicción de su madre 
-            y al violento ambiente de su colegio y su barrio.
+            Chiron es un joven afroamericano con una difícil infancia y
+            adolescencia, que crece en una zona conflictiva de Miami. A medida
+            que pasan los años, el joven se descubre a sí mismo intentando
+            sobrevivir en diferentes situaciones. Durante todo ese tiempo,
+            Chirón tendrá que hacer frente a la drogadicción de su madre y al
+            violento ambiente de su colegio y su barrio.
           </p>
-          <button role="button" class="button-play animate__heartBeat">
-            <i class="fa-solid fa-play"></i> Reproducir
-          </button>
-          <button role="button" class="button-play animate__heartBeat">
-            <i class="fa-solid fa-circle-info"></i> Más información
-          </button>
+          <a href="#trailer">
+            <button role="button" class="button-play animate__heartBeat">
+              <i class="fa-solid fa-play"></i> Reproducir
+            </button>
+          </a>
+          <a href="404.html">
+            <button role="button" class="button-play animate__heartBeat">
+              <i class="fa-solid fa-circle-info"></i> Más información
+            </button>
+          </a>
         </div>
       </div>
       <!-- ultimos lanzamientos= launch  -->
@@ -59,199 +70,277 @@
         <h3>Nuestros ultimos lanzamientos | Miralos todos:</h3>
       </div>
       <!-- CONTENEDOR DE LA PAGINA PRINCIPAL: -->
-            <!-- ---------------------- PRIMER SLIDER --------------------------------- -->
-            <div class="main-container">
-              <!-- contenedor de TITULO DE CATEGORIA Y CONTROLES -->
-              <div class="container-title">    
-                <h4>Drama</h4>
-              </div>
-              <!-- CONTENEDOR DEL SCROLL DE PELICULAS, DENTRO DEL PRINCIPAL (abarca flechas del carousel y las peliculas) -->
-              <div class="main-container-slider">
-                <button role="button" id="left-arrow" class="left-arrow">
-                  <i class="fa-solid fa-angle-left"></i>
-                </button>
-                
-                <div class="container-slider">
-                  <div class="slider">
-                    <div class="movies">
-                      <a href="404.html"><img src="img/moonlight poster1.jpg" alt=""/></a>
-                    </div>
-                    <div class="movies">
-                      <a href="404.html"><img src="img/1917 poster1.jpg" alt=""/></a>
-                    </div>
-                    <div class="movies">
-                      <a href="404.html"><img src="img/Ad astra poster1.jpg" alt=""/></a>
-                    </div>
-                    <div class="movies">
-                      <a href="404.html"><img src="img/el renacido poster1.jpg" alt=""/></a>
-                    </div>
-                    <div class="movies">
-                      <a href="404.html"><img src="img/interstellar poster1.jpg" alt=""/></a>
-                    </div>
-                    <div class="movies">
-                      <a href="404.html"><img src="img/serenity poster1.jpg" alt="" /></a>
-                    </div>
-                    <div class="movies">
-                      <a href="404.html"><img src="img/forrest gump poster1.jpg" alt="" /></a>
-                    </div>
-                    <div class="movies">
-                      <a href="404.html"><img src="img/mujercitas poster1.jpg" alt="" /></a>
-                    </div>
-                    <div class="movies">
-                      <a href="404.html"><img src="img/intocable poster1.jpg" alt="" /></a>
-                    </div>
-                    <div class="movies">
-                      <a href="404.html"><img src="img/antes de ti poster1.jpg" alt="" /></a>
-                    </div>
-                    <div class="movies">
-                      <a href="404.html"><img src="img/hollywood poster1.jpg" alt=""/></a>
-                    </div>
-                    <div class="movies">
-                      <a href="404.html"><img src="img/estrella poster1.jpg" alt=""/></a>
-                    </div>
-                    <div class="movies">
-                      <a href="404.html"><img src="img/bajo estrella poster1.jpg" alt=""/></a>
-                    </div>
-                    <div class="movies">
-                      <a href="404.html"><img src="img/lobo poster1.jpg" alt=""/></a>
-                    </div>
-                  </div>
-                </div>
-      
-                <button role="button" id="right-arrow" class="right-arrow">
-                  <i class="fa-solid fa-angle-right"></i>
-                </button>
-              </div>
-            </div>
-            <!-- ---------------------- SEGUNDO SLIDER --------------------------------- -->
-            <div class="main-container">
-              <!-- contenedor de TITULO DE CATEGORIA Y CONTROLES -->
-              <div class="container-title">    
-                <h4>Ciencia Ficción y Fantasía</h4>
-              </div>
-              <!-- CONTENEDOR DEL SCROLL DE PELICULAS, DENTRO DEL PRINCIPAL (abarca flechas del carousel y las peliculas) -->
-              <div class="main-container-slider">
-                <button role="button" id="left-arrow" class="left-arrow">
-                  <i class="fa-solid fa-angle-left"></i>
-                </button>
-      
-                <div class="container-slider">
-                  <div class="slider">
-                    <div class="movies">
-                      <a href="404.html"><img src="img/piedra filosofal poster1.jpg" alt=""/></a>
-                    </div>
-                    <div class="movies">
-                      <a href="404.html"><img src="img/camara secreta poster1.jpg" alt=""/></a>
-                    </div>
-                    <div class="movies">
-                      <a href="404.html"><img src="img/prisionero de azcaban poster1.jpg" alt=""/></a>
-                    </div>
-                    <div class="movies">
-                      <a href="404.html"><img src="img/caliz de fuego poster1.jpg" alt=""/></a>
-                    </div>
-                    <div class="movies">
-                      <a href="404.html"><img src="img/orden del fenix poster2.jpg" alt=""/></a>
-                    </div>
-                    <div class="movies">
-                      <a href="404.html"><img src="img/misterio del principe poster1.jpg" alt="" /></a>
-                    </div>
-                    <div class="movies">
-                      <a href="404.html"><img src="img/reliquias poster1.jpg" alt="" /></a>
-                    </div>
-                    <div class="movies">
-                      <a href="404.html"><img src="img/reliquias 2 poster1.jpg" alt="" /></a>
-                    </div>
-                    <div class="movies">
-                      <a href="404.html"><img src="img/hobbit 1 poster1.jpg" alt="" /></a>
-                    </div>
-                    <div class="movies">
-                      <a href="404.html"><img src="img/hobbit 2 poster1.jpg" alt="" /></a>
-                    </div>
-                    <div class="movies">
-                      <a href="404.html"><img src="img/senor de los anillos poster1.jpg" alt=""/></a>
-                    </div>
-                    <div class="movies">
-                      <a href="404.html"><img src="img/animales fantasticos 1 poster1.jpg" alt=""/></a>
-                    </div>
-                    <div class="movies">
-                      <a href="404.html"><img src="img/animales fant 2 poster1.jpg" alt=""/></a>
-                    </div>
-                    <div class="movies">
-                      <a href="404.html"><img src="img/animales fant 3 poster1.jpg" alt=""/></a>
-                    </div>
-                  </div>
-                </div>
-      
-                <button role="button" id="right-arrow" class="right-arrow">
-                  <i class="fa-solid fa-angle-right"></i>
-                </button>
-              </div>
-            </div>
-            <!-- ---------------------- TERCER SLIDER --------------------------------- -->
+      <!-- ---------------------- PRIMER SLIDER --------------------------------- -->
       <div class="main-container">
         <!-- contenedor de TITULO DE CATEGORIA Y CONTROLES -->
-        <div class="container-title">    
-          <h4>Infantil</h4>
+        <div class="container-title">
+          <h4>Drama</h4> 
         </div>
         <!-- CONTENEDOR DEL SCROLL DE PELICULAS, DENTRO DEL PRINCIPAL (abarca flechas del carousel y las peliculas) -->
         <div class="main-container-slider">
-          <button role="button" id="left-arrow" class="left-arrow">
+          <button role="button" id="left-arrow1" class="left-arrow" >
             <i class="fa-solid fa-angle-left"></i>
           </button>
 
-          <div class="container-slider">
-            <div class="slider">
+          <div class="container-slider" id="container-slider1">
+            <div class="slider" id="slider1">
               <div class="movies">
-                <a href="404.html"><img src="img/nemo poster1.jpg" alt=""/></a>
+                <a href="404.html"
+                  ><img src="img/moonlight poster1.jpg" alt=""
+                /></a>
               </div>
               <div class="movies">
-                <a href="404.html"><img src="img/dory poster1.jpg" alt=""/></a>
+                <a href="404.html"><img src="img/1917 poster1.jpg" alt="" /></a>
               </div>
               <div class="movies">
-                <a href="404.html"><img src="img/aladdin poster1.jpg" alt=""/></a>
+                <a href="404.html"
+                  ><img src="img/Ad astra poster1.jpg" alt=""
+                /></a>
               </div>
               <div class="movies">
-                <a href="404.html"><img src="img/encanto poster1.jpg" alt=""/></a>
+                <a href="404.html"
+                  ><img src="img/el renacido poster1.jpg" alt=""
+                /></a>
               </div>
               <div class="movies">
-                <a href="404.html"><img src="img/malefica poster2.jpg" alt="" /></a>
+                <a href="404.html"
+                  ><img src="img/interstellar poster1.jpg" alt=""
+                /></a>
               </div>
               <div class="movies">
-                <a href="404.html"><img src="img/frozen poster2.jpg" alt=""/></a>
+                <a href="404.html"
+                  ><img src="img/serenity poster1.jpg" alt=""
+                /></a>
               </div>
               <div class="movies">
-                <a href="404.html"><img src="img/frozen2 poster1.jpg" alt="" /></a>
+                <a href="404.html"
+                  ><img src="img/forrest gump poster1.jpg" alt=""
+                /></a>
               </div>
               <div class="movies">
-                <a href="404.html"><img src="img/Luca poster 1.jpg" alt="" /></a>
+                <a href="404.html"
+                  ><img src="img/mujercitas poster1.jpg" alt=""
+                /></a>
               </div>
               <div class="movies">
-                <a href="404.html"><img src="img/intensamente poster1.jpg" alt="" /></a>
+                <a href="404.html"
+                  ><img src="img/intocable poster1.jpg" alt=""
+                /></a>
               </div>
               <div class="movies">
-                <a href="404.html"><img src="img/moana poster1.jpg" alt="" /></a>
+                <a href="404.html"
+                  ><img src="img/antes de ti poster1.jpg" alt=""
+                /></a>
               </div>
               <div class="movies">
-                <a href="404.html"><img src="img/peter pan poster1.jpg" alt=""/></a>
+                <a href="404.html"
+                  ><img src="img/hollywood poster1.jpg" alt=""
+                /></a>
               </div>
               <div class="movies">
-                <a href="404.html"><img src="img/princesa sapo poster1.jpg" alt=""/></a>
+                <a href="404.html"
+                  ><img src="img/estrella poster1.jpg" alt=""
+                /></a>
               </div>
               <div class="movies">
-                <a href="404.html"><img src="img/soul poster1.jpg" alt=""/></a>
+                <a href="404.html"
+                  ><img src="img/bajo estrella poster1.jpg" alt=""
+                /></a>
               </div>
               <div class="movies">
-                <a href="404.html"><img src="img/rey leon poster1.jpg" alt=""/></a>
+                <a href="404.html"><img src="img/lobo poster1.jpg" alt="" /></a>
               </div>
             </div>
           </div>
 
-          <button role="button" id="right-arrow" class="right-arrow">
+          <button role="button" id="right-arrow1" class="right-arrow" >
             <i class="fa-solid fa-angle-right"></i>
           </button>
         </div>
       </div>
+      <!-- ---------------------- SEGUNDO SLIDER --------------------------------- -->
+      <div class="main-container">
+        <!-- contenedor de TITULO DE CATEGORIA Y CONTROLES -->
+        <div class="container-title">
+          <h4>Ciencia Ficción y Fantasía</h4>
+        </div>
+        <!-- CONTENEDOR DEL SCROLL DE PELICULAS, DENTRO DEL PRINCIPAL (abarca flechas del carousel y las peliculas) -->
+        <div class="main-container-slider">
+          <button role="button" id="left-arrow2" class="left-arrow" >
+            <i class="fa-solid fa-angle-left"></i>
+          </button>
 
+          <div class="container-slider2" id="container-slider2">
+            <div class="slider" id="slider2">
+              <div class="movies">
+                <a href="404.html"
+                  ><img src="img/piedra filosofal poster1.jpg" alt=""
+                /></a>
+              </div>
+              <div class="movies">
+                <a href="404.html"
+                  ><img src="img/camara secreta poster1.jpg" alt=""
+                /></a>
+              </div>
+              <div class="movies">
+                <a href="404.html"
+                  ><img src="img/prisionero de azcaban poster1.jpg" alt=""
+                /></a>
+              </div>
+              <div class="movies">
+                <a href="404.html"
+                  ><img src="img/caliz de fuego poster1.jpg" alt=""
+                /></a>
+              </div>
+              <div class="movies">
+                <a href="404.html"
+                  ><img src="img/orden del fenix poster2.jpg" alt=""
+                /></a>
+              </div>
+              <div class="movies">
+                <a href="404.html"
+                  ><img src="img/misterio del principe poster1.jpg" alt=""
+                /></a>
+              </div>
+              <div class="movies">
+                <a href="404.html"
+                  ><img src="img/reliquias poster1.jpg" alt=""
+                /></a>
+              </div>
+              <div class="movies">
+                <a href="404.html"
+                  ><img src="img/reliquias 2 poster1.jpg" alt=""
+                /></a>
+              </div>
+              <div class="movies">
+                <a href="404.html"
+                  ><img src="img/hobbit 1 poster1.jpg" alt=""
+                /></a>
+              </div>
+              <div class="movies">
+                <a href="404.html"
+                  ><img src="img/hobbit 2 poster1.jpg" alt=""
+                /></a>
+              </div>
+              <div class="movies">
+                <a href="404.html"
+                  ><img src="img/senor de los anillos poster1.jpg" alt=""
+                /></a>
+              </div>
+              <div class="movies">
+                <a href="404.html"
+                  ><img src="img/animales fantasticos 1 poster1.jpg" alt=""
+                /></a>
+              </div>
+              <div class="movies">
+                <a href="404.html"
+                  ><img src="img/animales fant 2 poster1.jpg" alt=""
+                /></a>
+              </div>
+              <div class="movies">
+                <a href="404.html"
+                  ><img src="img/animales fant 3 poster1.jpg" alt=""
+                /></a>
+              </div>
+            </div>
+          </div>
+
+          <button role="button" id="right-arrow2" class="right-arrow">
+            <i class="fa-solid fa-angle-right"></i>
+          </button>
+        </div>
+      </div>
+      <!-- ---------------------- TERCER SLIDER --------------------------------- -->
+      <div class="main-container">
+        <!-- contenedor de TITULO DE CATEGORIA Y CONTROLES -->
+        <div class="container-title">
+          <h4>Infantil</h4>
+        </div>
+        <!-- CONTENEDOR DEL SCROLL DE PELICULAS, DENTRO DEL PRINCIPAL (abarca flechas del carousel y las peliculas) -->
+        <div class="main-container-slider">
+          <button role="button" id="left-arrow3" class="left-arrow">
+            <i class="fa-solid fa-angle-left"></i>
+          </button>
+
+          <div class="container-slider" id="container-slider3">
+            <div class="slider" id="slider3">
+              <div class="movies">
+                <a href="404.html"><img src="img/nemo poster1.jpg" alt="" /></a>
+              </div>
+              <div class="movies">
+                <a href="404.html"><img src="img/dory poster1.jpg" alt="" /></a>
+              </div>
+              <div class="movies">
+                <a href="404.html"
+                  ><img src="img/aladdin poster1.jpg" alt=""
+                /></a>
+              </div>
+              <div class="movies">
+                <a href="404.html"
+                  ><img src="img/encanto poster1.jpg" alt=""
+                /></a>
+              </div>
+              <div class="movies">
+                <a href="404.html"
+                  ><img src="img/malefica poster2.jpg" alt=""
+                /></a>
+              </div>
+              <div class="movies">
+                <a href="404.html"
+                  ><img src="img/frozen poster2.jpg" alt=""
+                /></a>
+              </div>
+              <div class="movies">
+                <a href="404.html"
+                  ><img src="img/frozen2 poster1.jpg" alt=""
+                /></a>
+              </div>
+              <div class="movies">
+                <a href="404.html"
+                  ><img src="img/Luca poster 1.jpg" alt=""
+                /></a>
+              </div>
+              <div class="movies">
+                <a href="404.html"
+                  ><img src="img/intensamente poster1.jpg" alt=""
+                /></a>
+              </div>
+              <div class="movies">
+                <a href="404.html"
+                  ><img src="img/moana poster1.jpg" alt=""
+                /></a>
+              </div>
+              <div class="movies">
+                <a href="404.html"
+                  ><img src="img/peter pan poster1.jpg" alt=""
+                /></a>
+              </div>
+              <div class="movies">
+                <a href="404.html"
+                  ><img src="img/princesa sapo poster1.jpg" alt=""
+                /></a>
+              </div>
+              <div class="movies">
+                <a href="404.html"><img src="img/soul poster1.jpg" alt="" /></a>
+              </div>
+              <div class="movies">
+                <a href="404.html"
+                  ><img src="img/rey leon poster1.jpg" alt=""
+                /></a>
+              </div>
+            </div>
+          </div>
+
+          <button role="button" id="right-arrow3" class="right-arrow">
+            <i class="fa-solid fa-angle-right"></i>
+          </button>
+        </div>
+      </div>
+      <!-- ---------------------- VIDEO TRAILER --------------------------------- -->
+      <section class="trailer" id="trailer">
+        <h4>Trailer</h4>
+        <iframe class="trailer-video" width="560" height="315" src="https://www.youtube.com/embed/ZGjkwxgjNlQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </section>
     </main>
     <!-- FIN PAGINA PRINCIPAL -->
 
