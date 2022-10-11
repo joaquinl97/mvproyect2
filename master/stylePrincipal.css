@@ -6,8 +6,8 @@
 main{
     background-color: rgb(113, 79, 126);
     width: 100%;
-    /*   font-family: 'Open Sans', sans-serif; */
-    /* font-family: 'Square Peg', cursive;   ESTE ES PARA TITULOS */
+    /* font-family: 'Open Sans', sans-serif; */
+    /* font-family: 'Noto Sans Mono', monospace;  ESTE ES PARA TITULOS */
 }
 /* Boton para subir desde abajo para arriba del todo */
 .go-up{
@@ -19,6 +19,7 @@ main{
 	position: fixed;
     bottom:20px;
 	right:20px;
+    z-index: 2;
 }
 /* ------------------------------- CAROUSEL DE LA PORTADA PRINCIPAL MOVIE ---------------------------------*/
 .principal-movie{
@@ -26,30 +27,31 @@ main{
     min-height: 40.62em;
     color:  rgb(248, 237, 227);
     background: url(../master/img/moonlightfondo.jpg);
-    background-position: center center;
     background-size: cover;
     margin-bottom: 3.12em;
-    display: flex; /* para posicionar los textos abajo */
+    display: flex; 
     align-items: end;
 }
 .text-top{
-    background-color: rgba(0, 0, 0, 0.219);
-    margin-bottom: 6.25em;
+   /*  background-color: rgba(0, 0, 0, 0.219); */
+    margin-bottom: 3.12em;
     margin-left: 2.0em;
     margin-right: 2.0em;
 }
 .text-top h1{
-    font-family: 'Square Peg', cursive;
+    font-family: 'Noto Sans Mono', monospace;
+    display: flex;
+    justify-content: center;
     font-weight: 600;
-    font-size: 3,12em;
+    font-size: 6.25em;
     margin-bottom: 0.4em;
-}
+} 
 .text-top p{
     font-family: 'Open Sans', sans-serif;
     font-weight: normal;
     font-size: 1em;
     line-height: 1.75em;
-    max-width: 50%;
+    max-width: 50%; 
     margin-bottom: 1.25em;
 }
 .button-play{
@@ -73,7 +75,7 @@ main{
     margin: auto;
     margin-bottom: 30px;
 }
-/* -------------------- CONTENEDOR DE TITULOS Y CONTROLES ---------------*/
+/* -------------------- CONTENEDOR DE TITULOS ---------------*/
 
 .container-title h4{
     color: rgb(248, 237, 227);
@@ -110,7 +112,7 @@ main{
     line-height: 40px;
     color: rgb(248, 237, 227);
     cursor: pointer;
-    z-index: 500;    /* es para que quede por arriba de las imagenes  */
+    z-index: 1;    /* es para que quede por arriba de las imagenes  */
     transition: .2s ease all;
 }
 .left-arrow:hover, .right-arrow:hover{
@@ -173,7 +175,7 @@ main{
 @media screen and (max-width: 800px) {
 
     .principal-movie{
-        font-size: 14px;
+        font-size: 10px;
     }
     .text-top p{
         max-width: 100%;
@@ -256,54 +258,3 @@ body {
     border-radius: 50px;
     text-decoration: none;
 }
-/* #0077d8f4; */
-
-@-webkit-keyframes animates {
-    0% {
-        -webkit-transform: translateX(5%);
-        transform: translateX(5%);
-    }
-
-    100% {
-        -webkit-transform: translateX(-5%);
-        transform: translateX(-5%);
-    }
-}
-
-@keyframes animates {
-    0% {
-        -webkit-transform: translateX(5%);
-        transform: translateX(5%);
-    }
-
-    100% {
-        -webkit-transform: translateX(-5%);
-        transform: translateX(-5%);
-    }
-
-}
-
-@-webkit-keyframes animatestext {
-    0% {
-        -webkit-transform: rotate(5deg);
-        transform: rotate(5deg);
-    }
-
-    100% {
-        -webkit-transform: rotate(-5deg);
-        transform: rotate(-5deg);
-    }
-}
-
-@keyframes animatestext {
-    0% {
-        -webkit-transform: rotate(5deg);
-        transform: rotate(5deg);
-    }
-
-    100% {
-        -webkit-transform: rotate(-5deg);
-        transform: rotate(-5deg);
-    }
-}
-
