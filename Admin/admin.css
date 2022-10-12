@@ -1,5 +1,64 @@
-.newFilmButton{
-    background-color: aqua;
-    /* width: 100%; */
-    margin-left: 80%;
+*{
+    margin: 0;
+    padding: 0;
 }
+.newFilmButton{
+    /* background-color: aqua; */
+    /* width: 100%; */
+    margin-left: 40px;
+    margin-top: 40px;
+}
+.adminTable{
+    /* background-color: aqua; */
+    margin-top: 20px;
+    /* width: 90% !important; */
+    /* text-align: center; */
+}
+/* .table-responsive{
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+} */
+.adminOverflow{
+    background-color:  rgba(128, 128, 128, 0.229) ;
+    max-width: 600px ;
+    overflow-y: scroll ;
+    margin: 0 ;
+    padding: 0 ;
+    height: 35px;
+   
+}
+.containerOverflow{
+    /* background-color: blueviolet !important; */
+    /* margin: 0 !important; */
+    /* padding: 0 !important; */
+    /* max-width: 100px; */
+    /* display: flex; */
+    /* justify-content: center; */
+    /* height: 41.5px; */
+    /* max-width: 200px; */
+    /* height: 53.29px; */
+    
+    
+}
+.tableSection{
+    margin-left:40px ;
+    margin-right:40px ;
+}
+.trashImg{
+    height: 25px;
+}
+.editDelFavButtons{
+    /* height: 57.5px; */
+    align-items: center;
+    
+    
+   
+}
+/* .rowAdmin{
+    height: 53.29px;
+}
+.td{
+    height: 53.29px;
+
+} */

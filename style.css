@@ -1,0 +1,11 @@
+.imgMovie{
+    width: 200px;
+    height: 300px;
+}
+.cardImgMovie{
+    width: 200px;
+    transition: 500ms;
+}
+.cardImgMovie:hover{
+    transform: translate(12px, 1%);
+}
