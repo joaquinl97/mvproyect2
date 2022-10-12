@@ -6,8 +6,9 @@
 main{
     background-color: rgb(113, 79, 126);
     width: 100%;
+    min-height: 100vh;
     /* font-family: 'Open Sans', sans-serif; */
-    /* font-family: 'Noto Sans Mono', monospace;  ESTE ES PARA TITULOS */
+    /* font-family: 'Josefin Sans', sans-serif;  ESTE ES PARA TITULOS */
 }
 /* Boton para subir desde abajo para arriba del todo */
 .go-up{
@@ -21,12 +22,13 @@ main{
 	right:20px;
     z-index: 2;
 }
+
 /* ------------------------------- CAROUSEL DE LA PORTADA PRINCIPAL MOVIE ---------------------------------*/
 .principal-movie{
     font-size: 16px;
     min-height: 40.62em;
     color:  rgb(248, 237, 227);
-    background: url(../master/img/moonlightfondo.jpg);
+    background: url(./img/moonlight-canva-gif1.gif); 
     background-size: cover;
     margin-bottom: 3.12em;
     display: flex; 
@@ -39,12 +41,10 @@ main{
     margin-right: 2.0em;
 }
 .text-top h1{
-    font-family: 'Noto Sans Mono', monospace;
-    display: flex;
-    justify-content: center;
+    font-family: 'Josefin Sans', sans-serif;
     font-weight: 600;
     font-size: 6.25em;
-    margin-bottom: 0.4em;
+    margin-bottom: 0.2em;
 } 
 .text-top p{
     font-family: 'Open Sans', sans-serif;
@@ -68,6 +68,15 @@ main{
 .button-play:hover{
     background: rgba(0, 0, 0, 0.548);
 }
+
+/* ------------ Trailer y Modal ------------ */
+.modal-header h1{
+    color: white;
+}
+.trailer-video{
+    width: 100%;
+}
+
 /* -------------------- SUBTITULO FUERA DE LA PORTADA -------------------*/
 .last-launch{
     color: rgb(248, 237, 227);
@@ -75,8 +84,8 @@ main{
     margin: auto;
     margin-bottom: 30px;
 }
-/* -------------------- CONTENEDOR DE TITULOS ---------------*/
 
+/* -------------------- CONTENEDOR DE TITULOS ---------------*/
 .container-title h4{
     color: rgb(248, 237, 227);
     font-size: 20px;
@@ -124,6 +133,7 @@ main{
 .right-arrow{
     right: 0;
 }
+
 /* --------------------- CONTENEDOR DEL SLIDER/CAROUSEL DE PELICULAS ---------------------------*/
 .container-slider{
     width: 100%;
@@ -154,34 +164,19 @@ main{
 .movies img{
     width: 100%;
     vertical-align: top;
-}    
-/* ------------ Trailer ------------ */
-.trailer {
-    width: 95%;
-    margin: auto;
-    margin-bottom: 70px;
-}
-.trailer h4{
-    font-size: 20px;
-    color: rgb(248, 237, 227);
-}
-.trailer-video{
-    width: 100%;
-    margin-bottom: 50px;
-}
-
+}   
 
 /* ------------------------- MEDIA QUERIES -----------------------------*/
 @media screen and (max-width: 800px) {
 
     .principal-movie{
-        font-size: 10px;
+        font-size: 8px;
     }
     .text-top p{
-        max-width: 100%;
+        max-width: 90%;
     }
     /* ---- EN VEZ DE HACER RESPONSIVE EL CAROUSEL LO TRANSFORME A UNA GRID CON TODAS LAS OMAGENES DESPLEGADAS */
-    .container-slider{
+   /*  .container-slider{
         overflow: visible;
     }
     .slider{
@@ -191,7 +186,7 @@ main{
     }
     .indicators, .left-arrow, .right-arrow{
         display: none;
-    }
+    } */
 }
 
 /* ----------------------- PAGINA ERROR 404 ---------------------- */
@@ -208,7 +203,6 @@ body {
     text-align: center;
 
 }
-
 .container404-img {
     width: 100%;
     display: -webkit-box;
@@ -222,15 +216,12 @@ body {
     align-items: center;
 
 }
-
 .container404-img img {
     width: 300px;
     display: block;
     -webkit-animation: animates 2s linear infinite alternate;
     animation: animates 2s linear infinite alternate;
-
 }
-
 .container404-img p {
     position: absolute;
     font-size: 5.5rem;
@@ -241,14 +232,12 @@ body {
     -webkit-animation: animatestext 2s linear infinite alternate;
     animation: animatestext 2s linear infinite alternate;
 }
-
 .containerDescription p {
     color: rgb(248, 237, 227);
     width: 50%;
     margin: 2em auto;
     font-family: 'Gill Sans', sans-serif;
 }
-
 .containerDescription a{
     background-color: rgb(208, 184, 168);
     color: rgb(248, 237, 227);
