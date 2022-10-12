@@ -17,58 +17,60 @@ function readFunction() {
 
     if (movies !== []) {
         for (let item = 0; item < movies.length; item++) {
-            if (movies[item].optionsAdmin=="Ficcion") {
-                moviesViewJson.push(`
-                <h4>${movies[item].optionsAdmin}</h4>
-                <a href="${movies[item].videoAdmin}">
-                <div class="cardImgMovie m-4">
-                    <div>
-                      <img class="imgMovie" src="${movies[item].imageAdmin}" alt="" srcset="">
-                    </div>
-                    <div class="bg-dark">
-                        <p class="text-light text-center">
-                            <i class="text-light text-center">${movies[item].filmNameAdmin}</i>
-                        </p>
-                    </div>
+            // if (movies[item].optionsAdmin=="Ficcion") {
+            //     moviesViewJson.push(`
+            //     <h4>${movies[item].optionsAdmin}</h4>
+            //     <a href="${movies[item].videoAdmin}">
+            //     <div class="cardImgMovie m-4">
+            //         <div>
+            //           <img class="imgMovie" src="${movies[item].imageAdmin}" alt="" srcset="">
+            //         </div>
+            //         <div class="bg-dark">
+            //             <p class="text-light text-center">
+            //                 <i class="text-light text-center">${movies[item].filmNameAdmin}</i>
+            //             </p>
+            //         </div>
+            //     </div>
+            //     </a>
+            //     `)    
+            // }else if (movies[item].optionsAdmin=="Terror"){
+            //     moviesViewJson.push(`
+            //     <h4>${movies[item].optionsAdmin}</h4>
+            //     <a href="${movies[item].videoAdmin}">
+            //     <div class="cardImgMovie m-4">
+            //         <div>
+            //           <img class="imgMovie" src="${movies[item].imageAdmin}" alt="" srcset="">
+            //         </div>
+            //         <div class="bg-dark">
+            //             <p class="text-light text-center">
+            //                 <i class="text-light text-center">${movies[item].filmNameAdmin}</i>
+            //             </p>
+            //         </div>
+            //     </div>
+            //     </a>
+            //     `)  
+            // }
+
+            let resultFilter2=movies.filter((item)=> item.optionsAdmin=="Terror")
+            moviesViewJson.push(`
+            <h4>${resultFilter2}</h4>
+            <a href="${movies[item].videoAdmin}">
+            <div class="cardImgMovie m-4">
+                <div>
+                  <img class="imgMovie" src="${movies[item].imageAdmin}" alt="" srcset="">
                 </div>
-                </a>
-                `)    
-            }else if (movies[item].optionsAdmin=="Terror"){
-                moviesViewJson.push(`
-                <h4>${movies[item].optionsAdmin}</h4>
-                <a href="${movies[item].videoAdmin}">
-                <div class="cardImgMovie m-4">
-                    <div>
-                      <img class="imgMovie" src="${movies[item].imageAdmin}" alt="" srcset="">
-                    </div>
-                    <div class="bg-dark">
-                        <p class="text-light text-center">
-                            <i class="text-light text-center">${movies[item].filmNameAdmin}</i>
-                        </p>
-                    </div>
+                <div class="bg-dark">
+                    <p class="text-light text-center">
+                        <i class="text-light text-center">${movies[item].filmNameAdmin}</i>
+                    </p>
                 </div>
-                </a>
-                `)  
-            }
+            </div>
+            </a>
+            `)
             
         }
      
-            // let resultFilter2=movies.filter((item)=> item.optionsAdmin=="Terror")
-            // moviesViewJson.push(`
-            // <h4>${resultFilter2}</h4>
-            // <a href="${movies[item].videoAdmin}">
-            // <div class="cardImgMovie m-4">
-            //     <div>
-            //       <img class="imgMovie" src="${movies[item].imageAdmin}" alt="" srcset="">
-            //     </div>
-            //     <div class="bg-dark">
-            //         <p class="text-light text-center">
-            //             <i class="text-light text-center">${movies[item].filmNameAdmin}</i>
-            //         </p>
-            //     </div>
-            // </div>
-            // </a>
-            // `)
+            
             
 
             // let resultFilter3=movies.filter((item)=> item.optionsAdmin=="Comedia")
