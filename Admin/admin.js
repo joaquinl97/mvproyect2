@@ -5,43 +5,64 @@ let descriptionAdmin = document.getElementById("descriptionAdmin");
 let imageAdmin = document.getElementById("imageAdmin");
 let videoAdmin = document.getElementById("videoAdmin");
 
+
+let publicadaInput = document.getElementById("publicadaInput");
+// const publicada=publicadaInput.checked;
+let destacadaInput = document.getElementById("destacadaInput");
+// const destacada=destacadaInput.checked;
+
 let buttonSaveAdmin = document.getElementById("buttonSaveAdmin");
 let viewMoviesAdmin = document.getElementById("viewMoviesAdmin");
 
-let movies =JSON.parse(localStorage.getItem('movies')) || [];
+let cover = document.getElementById("cover");
 
+
+
+let movies = JSON.parse(localStorage.getItem('movies')) || [];
+
+
+// publicadaInput.checked == true
+// destacadaInput.checked == true
 //Create
 buttonSaveAdmin.addEventListener("click", () => {
+
+
     if (filmNameAdmin.value != "" && optionsAdmin.value != "" && descriptionAdmin.value != "") {
         movies.push({
             id: Math.round(Math.random() * 1000000),
-            filmNameAdmin:filmNameAdmin.value,
+            filmNameAdmin: filmNameAdmin.value,
             optionsAdmin: optionsAdmin.value,
             descriptionAdmin: descriptionAdmin.value,
             imageAdmin: imageAdmin.value,
             videoAdmin: videoAdmin.value,
+            publicadaInput: publicadaInput.checked,
+            destacadaInput: destacadaInput.checked,
+            cover: cover.value,
         })
         localStorage.setItem('movies', JSON.stringify(movies));
-        filmNameAdmin.value='';
-        optionsAdmin.value='';
-        descriptionAdmin.value='';
-        imageAdmin.value='';
-        videoAdmin.value='';
+        filmNameAdmin.value = '';
+        optionsAdmin.value = '';
+        descriptionAdmin.value = '';
+        imageAdmin.value = '';
+        videoAdmin.value = '';
+        publicadaInput.checked = false;
+        destacadaInput.checked = false;
+        cover.value = '';
         readFunction()
 
-        window.location.href = "../index.html"
+        // window.location.href = "../index.html"
 
 
-    } else{
+    } else {
         alert('Completar campos')
     }
 })
 
 //Read
-const readFunction= ()=> {
-    let movies =JSON.parse(localStorage.getItem('movies'))||[];
-    let showMovies=[]
-    movies.map((item)=> {
+const readFunction = () => {
+    movies = JSON.parse(localStorage.getItem('movies')) || [];
+    let showMovies = []
+    movies.map((item) => {
         showMovies.push(`
         <tr class="rowAdmin">
               <th scope="row">${item.id}</th>
@@ -54,26 +75,115 @@ const readFunction= ()=> {
                 </div>
 
               </td>
-              <td>check</td>
+              <td>${item.publicadaInput == true ? 'publicado' : 'no publicado'}</td>
+              <td>${item.destacadaInput == true ? 'destacado' : 'no dest'}</td>
               <td class="editDelFavButtons d-flex">
-                <button class="btn btn-danger p-1 mx-1"><img class="trashImg" src="adminImages/trash-can.png"
+                <button class="btn btn-danger p-1 mx-1" onclick="deleteFunction('${item.id}')" ><img class="trashImg" src="adminImages/trash-can.png"
                     alt=""></button>
-                <button class="btn btn-success p-1 mx-1"><img class="trashImg" src="adminImages/edit.png"
+                <button class="btn btn-success p-1 mx-1" data-bs-toggle="modal" data-bs-target="#updateModal" onclick="viewUpdate('${item.id}')"><img class="trashImg" src="adminImages/edit.png"
                     alt=""></button>
-                <button class="btn btn-warning p-1 mx-1"><img class="trashImg" src="adminImages/star.png"
-                    alt=""></button>
+              
 
               </td>
             </tr>
         `)
     })
-    viewMoviesAdmin.innerHTML=showMovies.join('')
+    viewMoviesAdmin.innerHTML = showMovies.join('')
 }
 readFunction()
 
 //Update
-let updateFilmNameAdmin
+let filmNameAdminUpdate = document.getElementById("filmNameAdminUpdate");
+let optionsAdminUpdate = document.getElementById("optionsAdminUpdate");
+let descriptionAdminUpdate = document.getElementById("descriptionAdminUpdate");
+let imageAdminUpdate = document.getElementById("imageAdminUpdate");
+let videoAdminUpdate = document.getElementById("videoAdminUpdate");
 
-const updateFunction =()=> {
+let publicadaInputUpdate = document.getElementById("publicadaInputUpdate");
+let destacadaInputUpdate = document.getElementById("destacadaInputUpdate");
+let identifier;
+const viewUpdate = (id) => {
+    identifier = id;
+    movies.map((item) => {
+        if (item.id == id) {
+            item.id = id
+            filmNameAdminUpdate.value = item.filmNameAdmin
+            optionsAdminUpdate.value = item.optionsAdmin
+            descriptionAdminUpdate.value = item.descriptionAdmin
+            imageAdminUpdate.value = item.imageAdmin
+            videoAdminUpdate.value = item.videoAdmin
+            publicadaInputUpdate.checked = item.publicadaInput
+            destacadaInputUpdate.checked = item.destacadaInput
+
+        }
+    })
+}
+
+const updateFunction = () => {
+    let updateFunction = [];
+    movies.map((item) => {
+        if (item.id == identifier) {
+            updateFunction.push({
+                ...item,
+                filmNameAdmin: filmNameAdminUpdate.value,
+                optionsAdmin: optionsAdminUpdate.value,
+                descriptionAdmin: descriptionAdminUpdate.value,
+                imageAdmin: imageAdminUpdate.value,
+                videoAdmin: videoAdminUpdate.value,
+                publicadaInput: publicadaInputUpdate.checked,
+                destacadaInput: destacadaInputUpdate.checked,
+            })
+
+        } else {
+            updateFunction.push(item)
+
+        }
+    })
+    localStorage.setItem('movies', JSON.stringify(updateFunction))
+    movies = JSON.parse(localStorage.getItem('movies')) || [];
+    readFunction()
+
 
 }
+
+
+//Delete
+
+const deleteFunction = (id) => {
+    let deleteFunction = []
+    movies.map((item) => {
+        if (id != item.id) {
+            deleteFunction.push(item)
+
+        }
+    })
+    localStorage.setItem('movies', JSON.stringify(deleteFunction))
+    movies = JSON.parse(localStorage.getItem('movies')) || []
+    readFunction()
+}
+
+
+//Cover page
+let coverImage = document.getElementById("coverImage");
+
+function createCover() {
+    
+    let coverImageAbout = []
+    movies.map((item) => {
+        if (item.destacadaInput == true) {
+            coverImageAbout.push(`
+            <div class="w-100 imgportada" style="background-image: url(${item.cover});" >
+                
+            </div>
+            
+            `)
+
+        }
+
+
+    })
+    coverImage.innerHTML = coverImageAbout.join('')
+
+}
+createCover()
+

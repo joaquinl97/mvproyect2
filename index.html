@@ -14,46 +14,52 @@
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg bg-light">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">Peliculas 😎</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Movies</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./Admin/admin.html">Admin</a>
-                        </li>
-                    </ul>
-                    <button type="button" class="btn btn-success" id="exitButton">
+
+    <header class=" ">
+        <!-- Aqui empieza el código del navbar  -->
+    <nav class="navbar-content navbar navbar-expand-lg navbar navbar-dark pt-3 pb-3 ">
+        <div class="container-fluid"> 
+            <img src="https://avatars.githubusercontent.com/u/66399523?s=280&v=4" width="60px" alt="logoPageMovie">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav position-absolute end-0 me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./Admin/admin.html">Admin</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <button type="button" class="btn btn-dark" id="exitButton">
                         Cerras Sesion
                     </button>
-                </div>
+                </ul>
+               
             </div>
-        </nav>
-    </header>
+        </div>
+    </nav>
+      
+    
+</header> 
+
+
     <main>
-        <!-- <section>
-            <div class="w-100 imgportada">
-            </div>
-        </section> -->
+        <section id="coverImage">
+            <!-- <div class="w-100 imgportada" style="background-image: url(https://i.pinimg.com/originals/c8/6d/27/c86d276a82e3a331e7a55f1c103bfe0d.jpg);" >
+                
+            </div> -->
+        </section>
         
         <section id="viewMoviesAdmin" class="d-flex flex-wrap justify-content-evenly">
             
         </section>
     </main>
+
+    
     <script src="./app.js"></script>
-    <!-- <script src="sesion.js"></script> -->
     <!-- <script src="./Admin/admin.js"></script> -->
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
