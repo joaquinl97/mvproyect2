@@ -5,7 +5,7 @@ header {
     display: flex;
     justify-content: center;
     background-attachment: fixed;
-    background-color: rgba(0, 0, 0, 0.278);
+    background-color:#7D6E83;
      box-shadow: var(--shd, 0 0 10px rgba(0, 0, 0, .5));
   }
   
@@ -38,6 +38,7 @@ header {
     width: 25px;
   }
   
+
   /* Fin de CSS de navbar  */
   
   .imgportada{
@@ -60,4 +61,14 @@ header {
 }
 .cardImgMovie:hover{
     transform: translate(12px, 1%);
+}
+
+@media (max-width: 991px){
+  .nav-item{
+    background-color: #7D6E83;
+    padding: 10px;
+    border: 1px solid grey;
+    /* margin-left: 5px; */
+  }
+
 }

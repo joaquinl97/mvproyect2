@@ -78,9 +78,9 @@ const readFunction = () => {
               <td>${item.publicadaInput == true ? 'publicado' : 'no publicado'}</td>
               <td>${item.destacadaInput == true ? 'destacado' : 'no dest'}</td>
               <td class="editDelFavButtons d-flex">
-                <button class="btn btn-danger p-1 mx-1" onclick="deleteFunction('${item.id}')" ><img class="trashImg" src="adminImages/trash-can.png"
+                <button class="btn btn-light p-1 mx-1" onclick="deleteFunction('${item.id}')" ><img class="trashImg" src="adminImages/trash-can.png"
                     alt=""></button>
-                <button class="btn btn-success p-1 mx-1" data-bs-toggle="modal" data-bs-target="#updateModal" onclick="viewUpdate('${item.id}')"><img class="trashImg" src="adminImages/edit.png"
+                <button class="btn btn-light p-1 mx-1" data-bs-toggle="modal" data-bs-target="#updateModal" onclick="viewUpdate('${item.id}')"><img class="trashImg" src="adminImages/edit.png"
                     alt=""></button>
               
 
@@ -101,6 +101,7 @@ let videoAdminUpdate = document.getElementById("videoAdminUpdate");
 
 let publicadaInputUpdate = document.getElementById("publicadaInputUpdate");
 let destacadaInputUpdate = document.getElementById("destacadaInputUpdate");
+let coverUpdate = document.getElementById("coverUpdate");
 let identifier;
 const viewUpdate = (id) => {
     identifier = id;
@@ -114,6 +115,7 @@ const viewUpdate = (id) => {
             videoAdminUpdate.value = item.videoAdmin
             publicadaInputUpdate.checked = item.publicadaInput
             destacadaInputUpdate.checked = item.destacadaInput
+            coverUpdate.value = item.cover
 
         }
     })
@@ -132,10 +134,14 @@ const updateFunction = () => {
                 videoAdmin: videoAdminUpdate.value,
                 publicadaInput: publicadaInputUpdate.checked,
                 destacadaInput: destacadaInputUpdate.checked,
+                cover: coverUpdate.value,
             })
 
         } else {
-            updateFunction.push(item)
+            updateFunction.push({
+                ...item,
+                destacadaInput: false,
+            })
 
         }
     })
@@ -163,27 +169,69 @@ const deleteFunction = (id) => {
 }
 
 
-//Cover page
-let coverImage = document.getElementById("coverImage");
+// //Cover page
+// let coverImage = document.getElementById("coverImage");
 
-function createCover() {
+// function createCover() {
     
-    let coverImageAbout = []
-    movies.map((item) => {
-        if (item.destacadaInput == true) {
-            coverImageAbout.push(`
-            <div class="w-100 imgportada" style="background-image: url(${item.cover});" >
+//     let coverImageAbout = []
+//     movies.map((item) => {
+//         if (item.destacadaInput == true) {
+//             coverImageAbout.push(`
+//             <div class="w-100 imgportada" style="background-image: url(${item.cover});" >
                 
-            </div>
+//             </div>
             
-            `)
+//             `)
 
+//         }
+
+
+//     })
+//     coverImage.innerHTML = coverImageAbout.join('')
+
+
+// }
+// createCover()
+
+
+
+//Carrousel by genres
+let fictionMovies = document.getElementById("fictionMovies");
+let horrorMovies = document.getElementById("horrorMovies");
+let comedyMovies = document.getElementById("comedyMovies");
+let musicalMovies = document.getElementById("musicalMovies");
+let dramaMovies = document.getElementById("dramaMovies");
+
+function fictionFunction() {
+    movies = JSON.parse(localStorage.getItem('movies')) || [];
+    let fictionGenre=[]
+    movies.map((item) => {
+        if (item.optionsAdmin=="Ficcion" && item.publicadaInput== true) {
+            fictionGenre.push(`
+            <a href="${item.videoAdmin}">
+                <div class="cardImgMovie m-4">
+                    <div>
+                      <img class="imgMovie" src="${item.imageAdmin}" alt="" srcset="">
+                    </div>
+                    <div class="bg-dark">
+                        <p class="text-light text-center">
+                            <i class="text-light text-center">${item.filmNameAdmin}</i>
+                        </p>
+                    </div>
+                </div>
+                </a>
+
+            `)
+            
+            
         }
+        fictionMovies.innerHTML=fictionGenre.join('');
 
 
     })
-    coverImage.innerHTML = coverImageAbout.join('')
-
+    
 }
-createCover()
+fictionFunction()
+
 

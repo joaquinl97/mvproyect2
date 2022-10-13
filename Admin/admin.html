@@ -12,37 +12,20 @@
 </head>
 
 <body>
-  <!-- <header>
-    <nav class="navbar navbar-expand-lg bg-light">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="../index.html">Admin 😎</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Movies</a>
-                    </li>
-                </ul>
-                <button type="button" class="btn btn-outline-dark mx-2" data-bs-toggle="modal"
-                    data-bs-target="#exampleModal">
-                    Nueva Pelicula 😎
-                </button>
-            </div>
-        </div>
-    </nav>
-</header> -->
+
   <header class=" ">
     <!-- Aqui empieza el código del navbar  -->
     <nav class="navbar-content navbar navbar-expand-lg navbar navbar-dark pt-3 pb-3 ">
       <div class="container-fluid">
-        <img src="https://avatars.githubusercontent.com/u/66399523?s=280&v=4" width="60px" alt="logoPageMovie">
+        <div class="d-flex">
+        <div>
+          <img src="../main/universal.png" alt="" height="50px">
+        </div>
+        <div class="text-center">
+          <h4 class="m-0 ">UNIVERSAL</h4>
+          <b class="">MOVIE THEATER</b>
+        </div>
+      </div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -55,7 +38,7 @@
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
             </li>
-            <button type="button" class="btn btn-dark" id="exitButton">
+            <button type="button" class="btn btn-dark logOutButton" id="exitButton">
               Cerras Sesion
             </button>
           </ul>
@@ -63,12 +46,21 @@
         </div>
       </div>
     </nav>
+    
 
 
   </header>
 
 
   <main>
+
+    <div class="m-5">
+      <h3>Administración de contenido</h3>
+      <p>En la tabla que se muestra a continuación, se muestran todos los datos almacenados en el servidor. Se pueden
+        agregar nuevos lanzamientos presionando el botón "Nueva película". Además es posible eliminar o editar las que
+        ya están cargadas desde la sección "Acciones". </p>
+    </div>
+
 
     <section class="newFilmButton" data-bs-toggle="modal" data-bs-target="#exampleModal">
       <button class="btn btn-dark">Nueva película</button>
@@ -171,6 +163,10 @@
                 <label class="form-label">Url del trailer</label>
                 <input type="text" class="form-control" id="videoAdminUpdate" aria-describedby="emailHelp">
               </div>
+              <div class="mb-3">
+                <label class="form-label">Url cover</label>
+                <input type="text" class="form-control" id="coverUpdate" aria-describedby="emailHelp">
+              </div>
               <div class="custom-control custom-switch form-group form-check my-1">
                 <input type="checkbox" class="custom-control-input color3" name="publicadaInputUpdate"
                   id="publicadaInputUpdate">
@@ -191,10 +187,11 @@
       </div>
     </section>
 
+
     <section class="tableSection">
       <div class="table-responsive">
-        <table class="adminTable table-secondary table">
-          <thead>
+        <table class="adminTable  table">
+          <thead class="tableHead">
             <tr>
               <th scope="col">ID</th>
               <th scope="col">Película</th>
@@ -233,9 +230,11 @@
         </table>
       </div>
     </section>
+
   </main>
   <footer></footer>
   <script src="./admin.js"></script>
+
   <!-- <script src="../app.js"></script> -->
   <!-- <script src="./app.js"></script> -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"

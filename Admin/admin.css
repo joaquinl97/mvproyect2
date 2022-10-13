@@ -41,6 +41,15 @@
     
     
 }
+.tableHead{
+    background-color: rgb(116, 116, 116) ;
+    color: white;
+    border-color: rgb(144, 144, 144);
+}
+.tableBody{
+    background-color: rgb(57, 57, 57);
+    color: white;
+}
 .tableSection{
     margin-left:40px ;
     margin-right:40px ;
