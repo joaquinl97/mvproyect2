@@ -1,141 +1,3 @@
-// let filmNameAdmin = document.getElementById("filmNameAdmin");
-// let optionsAdmin = document.getElementById("optionsAdmin");
-// let descriptionAdmin = document.getElementById("descriptionAdmin");
-
-// let imageAdmin = document.getElementById("imageAdmin");
-// let videoAdmin = document.getElementById("videoAdmin");
-
-// let buttonSaveAdmin = document.getElementById("buttonSaveAdmin");
-// let viewMoviesAdmin = document.getElementById("viewMoviesAdmin");
-
-// let movies =JSON.parse(localStorage.getItem('movies')) || [];
-
-// //Read
-
-// function readFunction() {
-//     let moviesViewJson = []
-
-//     if (movies !== []) {
-//         for (let item = 0; item < movies.length; item++) {
-//             if (movies[item].optionsAdmin=="Ficcion") {
-//                 moviesViewJson.push(`
-//                 <h4>${movies[item].optionsAdmin}</h4>
-                // <a href="${movies[item].videoAdmin}">
-                // <div class="cardImgMovie m-4">
-                //     <div>
-                //       <img class="imgMovie" src="${movies[item].imageAdmin}" alt="" srcset="">
-                //     </div>
-                //     <div class="bg-dark">
-                //         <p class="text-light text-center">
-                //             <i class="text-light text-center">${movies[item].filmNameAdmin}</i>
-                //         </p>
-                //     </div>
-                // </div>
-                // </a>
-//                 `)    
-//             }else if (movies[item].optionsAdmin=="Terror"){
-//                 moviesViewJson.push(`
-//                 <h4>${movies[item].optionsAdmin}</h4>
-//                 <a href="${movies[item].videoAdmin}">
-//                 <div class="cardImgMovie m-4">
-//                     <div>
-//                       <img class="imgMovie" src="${movies[item].imageAdmin}" alt="" srcset="">
-//                     </div>
-//                     <div class="bg-dark">
-//                         <p class="text-light text-center">
-//                             <i class="text-light text-center">${movies[item].filmNameAdmin}</i>
-//                         </p>
-//                     </div>
-//                 </div>
-//                 </a>
-//                 `)  
-//             }
-
-//             let resultFilter2=movies.filter((item)=> item.optionsAdmin=="Terror")
-//             moviesViewJson.push(`
-//             <h4>${resultFilter2}</h4>
-//             <a href="${movies[item].videoAdmin}">
-//             <div class="cardImgMovie m-4">
-//                 <div>
-//                   <img class="imgMovie" src="${movies[item].imageAdmin}" alt="" srcset="">
-//                 </div>
-//                 <div class="bg-dark">
-//                     <p class="text-light text-center">
-//                         <i class="text-light text-center">${movies[item].filmNameAdmin}</i>
-//                     </p>
-//                 </div>
-//             </div>
-//             </a>
-//             `)
-            
-//         }
-     
-            
-            
-
-//             let resultFilter3=movies.filter((item)=> item.optionsAdmin=="Comedia")
-//             moviesViewJson.push(`
-//             <h4>${resultFilter3}</h4>
-//             <a href="${movies[item].videoAdmin}">
-//             <div class="cardImgMovie m-4">
-//                 <div>
-//                   <img class="imgMovie" src="${movies[item].imageAdmin}" alt="" srcset="">
-//                 </div>
-//                 <div class="bg-dark">
-//                     <p class="text-light text-center">
-//                         <i class="text-light text-center">${movies[item].filmNameAdmin}</i>
-//                     </p>
-//                 </div>
-//             </div>
-//             </a>
-//             `)
-
-//             let resultFilter4=movies.filter((item)=> item.optionsAdmin=="Musical")
-//             moviesViewJson.push(`
-//             <h4>${resultFilter4}</h4>
-//             <a href="${movies[item].videoAdmin}">
-//             <div class="cardImgMovie m-4">
-//                 <div>
-//                   <img class="imgMovie" src="${movies[item].imageAdmin}" alt="" srcset="">
-//                 </div>
-//                 <div class="bg-dark">
-//                     <p class="text-light text-center">
-//                         <i class="text-light text-center">${movies[item].filmNameAdmin}</i>
-//                     </p>
-//                 </div>
-//             </div>
-//             </a>
-//             `)
-
-//             let resultFilter5=movies.filter((item)=> item.optionsAdmin=="Drama")
-//             moviesViewJson.push(`
-//             <h4>${resultFilter5}</h4>
-//             <a href="${movies[item].videoAdmin}">
-//             <div class="cardImgMovie m-4">
-//                 <div>
-//                   <img class="imgMovie" src="${movies[item].imageAdmin}" alt="" srcset="">
-//                 </div>
-//                 <div class="bg-dark">
-//                     <p class="text-light text-center">
-//                         <i class="text-light text-center">${movies[item].filmNameAdmin}</i>
-//                     </p>
-//                 </div>
-//             </div>
-//             </a>
-//             `)
-        
-        
-//     } else {
-//         swal("Error", "No hay peliculas disponibles", "error");
-//     }
-//     viewMoviesAdmin.innerHTML = moviesViewJson.join('');
-// }
-
-
-
-// readFunction()
-
-
 //Cover page
 let coverImage = document.getElementById("coverImage");
 
@@ -160,3 +22,165 @@ function createCover() {
 
 }
 createCover()
+
+//Carrousel by genres
+let fictionMovies = document.getElementById("fictionMovies");
+let horrorMovies = document.getElementById("horrorMovies");
+let comedyMovies = document.getElementById("comedyMovies");
+let musicalMovies = document.getElementById("musicalMovies");
+let dramaMovies = document.getElementById("dramaMovies");
+
+function fictionFunction() {
+    movies = JSON.parse(localStorage.getItem('movies')) || [];
+    let fictionGenre=[]
+    movies.map((item) => {
+        if (item.optionsAdmin=="Ficcion" && item.publicadaInput== true) {
+            fictionGenre.push(`
+            <a href="${item.videoAdmin}">
+                <div class="cardImgMovie m-4">
+                    <div>
+                      <img class="imgMovie" src="${item.imageAdmin}" alt="" srcset="">
+                    </div>
+                    <div class="bg-dark">
+                        <p class="text-light text-center">
+                            <i class="text-light text-center">${item.filmNameAdmin}</i>
+                        </p>
+                    </div>
+                </div>
+                </a>
+
+            `)
+            
+            
+        }
+        fictionMovies.innerHTML=fictionGenre.join('');
+
+
+    })
+    
+}
+fictionFunction()
+
+function horrorFunction() {
+    movies = JSON.parse(localStorage.getItem('movies')) || [];
+    let horrorGenre=[]
+    movies.map((item) => {
+        if (item.optionsAdmin=="Terror" && item.publicadaInput== true) {
+            horrorGenre.push(`
+            <a href="${item.videoAdmin}">
+                <div class="cardImgMovie m-4">
+                    <div>
+                      <img class="imgMovie" src="${item.imageAdmin}" alt="" srcset="">
+                    </div>
+                    <div class="bg-dark">
+                        <p class="text-light text-center">
+                            <i class="text-light text-center">${item.filmNameAdmin}</i>
+                        </p>
+                    </div>
+                </div>
+                </a>
+
+            `)
+            
+            
+        }
+        horrorMovies.innerHTML=horrorGenre.join('');
+
+
+    })
+    
+}
+horrorFunction()
+
+function comedyFunction() {
+    movies = JSON.parse(localStorage.getItem('movies')) || [];
+    let comedyGenre=[]
+    movies.map((item) => {
+        if (item.optionsAdmin=="Comedia" && item.publicadaInput== true) {
+            comedyGenre.push(`
+            <a href="${item.videoAdmin}">
+                <div class="cardImgMovie m-4">
+                    <div>
+                      <img class="imgMovie" src="${item.imageAdmin}" alt="" srcset="">
+                    </div>
+                    <div class="bg-dark">
+                        <p class="text-light text-center">
+                            <i class="text-light text-center">${item.filmNameAdmin}</i>
+                        </p>
+                    </div>
+                </div>
+                </a>
+
+            `)
+            
+            
+        }
+        comedyMovies.innerHTML=comedyGenre.join('');
+
+
+    })
+    
+}
+comedyFunction()
+
+function musicalFunction() {
+    movies = JSON.parse(localStorage.getItem('movies')) || [];
+    let musicalGenre=[]
+    movies.map((item) => {
+        if (item.optionsAdmin=="Musical" && item.publicadaInput== true) {
+            musicalGenre.push(`
+            <a href="${item.videoAdmin}">
+                <div class="cardImgMovie m-4">
+                    <div>
+                      <img class="imgMovie" src="${item.imageAdmin}" alt="" srcset="">
+                    </div>
+                    <div class="bg-dark">
+                        <p class="text-light text-center">
+                            <i class="text-light text-center">${item.filmNameAdmin}</i>
+                        </p>
+                    </div>
+                </div>
+                </a>
+
+            `)
+            
+            
+        }
+        musicalMovies.innerHTML=musicalGenre.join('');
+
+
+    })
+    
+}
+musicalFunction()
+
+function dramaFunction() {
+    movies = JSON.parse(localStorage.getItem('movies')) || [];
+    let dramaGenre=[]
+    movies.map((item) => {
+        if (item.optionsAdmin=="Drama" && item.publicadaInput== true) {
+            dramaGenre.push(`
+            <a href="${item.videoAdmin}">
+                <div class="cardImgMovie m-4">
+                    <div>
+                      <img class="imgMovie" src="${item.imageAdmin}" alt="" srcset="">
+                    </div>
+                    <div class="bg-dark">
+                        <p class="text-light text-center">
+                            <i class="text-light text-center">${item.filmNameAdmin}</i>
+                        </p>
+                    </div>
+                </div>
+                </a>
+
+            `)
+            
+            
+        }
+        dramaMovies.innerHTML=dramaGenre.join('');
+
+
+    })
+    
+}
+dramaFunction()

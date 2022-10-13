@@ -137,13 +137,18 @@ const updateFunction = () => {
                 cover: coverUpdate.value,
             })
 
-        } else {
-            updateFunction.push({
-                ...item,
-                destacadaInput: false,
-            })
+        }
+        else {
+            updateFunction.push(item)
+
+
+            // updateFunction.push({
+            //     ...item,
+            //     destacadaInput: false,
+            // })
 
         }
+
     })
     localStorage.setItem('movies', JSON.stringify(updateFunction))
     movies = JSON.parse(localStorage.getItem('movies')) || [];
@@ -167,71 +172,5 @@ const deleteFunction = (id) => {
     movies = JSON.parse(localStorage.getItem('movies')) || []
     readFunction()
 }
-
-
-// //Cover page
-// let coverImage = document.getElementById("coverImage");
-
-// function createCover() {
-    
-//     let coverImageAbout = []
-//     movies.map((item) => {
-//         if (item.destacadaInput == true) {
-//             coverImageAbout.push(`
-//             <div class="w-100 imgportada" style="background-image: url(${item.cover});" >
-                
-//             </div>
-            
-//             `)
-
-//         }
-
-
-//     })
-//     coverImage.innerHTML = coverImageAbout.join('')
-
-
-// }
-// createCover()
-
-
-
-//Carrousel by genres
-let fictionMovies = document.getElementById("fictionMovies");
-let horrorMovies = document.getElementById("horrorMovies");
-let comedyMovies = document.getElementById("comedyMovies");
-let musicalMovies = document.getElementById("musicalMovies");
-let dramaMovies = document.getElementById("dramaMovies");
-
-function fictionFunction() {
-    movies = JSON.parse(localStorage.getItem('movies')) || [];
-    let fictionGenre=[]
-    movies.map((item) => {
-        if (item.optionsAdmin=="Ficcion" && item.publicadaInput== true) {
-            fictionGenre.push(`
-            <a href="${item.videoAdmin}">
-                <div class="cardImgMovie m-4">
-                    <div>
-                      <img class="imgMovie" src="${item.imageAdmin}" alt="" srcset="">
-                    </div>
-                    <div class="bg-dark">
-                        <p class="text-light text-center">
-                            <i class="text-light text-center">${item.filmNameAdmin}</i>
-                        </p>
-                    </div>
-                </div>
-                </a>
-
-            `)
-            
-            
-        }
-        fictionMovies.innerHTML=fictionGenre.join('');
-
-
-    })
-    
-}
-fictionFunction()
 
 
