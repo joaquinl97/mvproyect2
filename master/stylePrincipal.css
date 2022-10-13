@@ -176,7 +176,7 @@ main{
         max-width: 90%;
     }
     /* ---- EN VEZ DE HACER RESPONSIVE EL CAROUSEL LO TRANSFORME A UNA GRID CON TODAS LAS OMAGENES DESPLEGADAS */
-   /*  .container-slider{
+    .container-slider{
         overflow: visible;
     }
     .slider{
@@ -186,7 +186,7 @@ main{
     }
     .indicators, .left-arrow, .right-arrow{
         display: none;
-    } */
+    } 
 }
 
 /* ----------------------- PAGINA ERROR 404 ---------------------- */
