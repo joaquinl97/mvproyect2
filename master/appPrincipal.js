@@ -42,7 +42,7 @@ LeftArrowThree.addEventListener("click", () => {
 
  /* ----------------- HOVER A LA IMAGEN CUANDO PASO EL CURSOR------------------ */
 
-movies.forEach((movie) => {
+/* movies.forEach((movie) => {
     movie.addEventListener("mouseenter", (e) => {
         const element = e.currentTarget;
         setTimeout(() => {
@@ -50,10 +50,11 @@ movies.forEach((movie) => {
             element.classList.add("hover");
         }, 200);
     });
-});
+});  */
 
 /* Para cuando saque el cursor, se salga el hover de la pelicula */
-lineOne.addEventListener("mouseleave", () => {
+
+/* lineOne.addEventListener("mouseleave", () => {
 	movies.forEach(movie => movie.classList.remove("hover"));
 }) 
 lineTwo.addEventListener("mouseleave", () => {
@@ -61,7 +62,7 @@ lineTwo.addEventListener("mouseleave", () => {
 }) 
 lineThree.addEventListener("mouseleave", () => {
 	movies.forEach(movie => movie.classList.remove("hover"));
-}) 
+})   */
 
 /* Digo: quiero acceder a todas las peliculas, y agregro un forEach que indique que por cada pelicula que tenga dentro quiero que me 
 ejecute una funcion flecha donde me agregue un EVENTO para obtener el ELEMNTO (por el cual pasamos el cursor), 
