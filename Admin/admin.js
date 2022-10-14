@@ -64,7 +64,7 @@ const readFunction = () => {
     let showMovies = []
     movies.map((item) => {
         showMovies.push(`
-        <tr class="rowAdmin bg-warning text-dark">
+        <tr class="rowAdmin ${item.destacadaInput == true ? 'bg-warning text-dark' : 'bg-dark'}   ">
               <th scope="row">${item.id}</th>
               <td>${item.filmNameAdmin}</td>
               <td>${item.optionsAdmin}</td>
