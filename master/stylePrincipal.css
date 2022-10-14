@@ -166,6 +166,23 @@ main{
     vertical-align: top;
 }   
 
+/* --------------------------- BOTON DE VER TRAILERS DE CADA PELICULA -------------------------------------------- */
+.button-trailer{
+    background-color: rgba(255, 255, 255, 0.178);
+    text-decoration: none;
+    border: none;
+    border-radius: 0.31em;
+    padding: 0.3em;
+    color: white;
+    margin-right: 1.25em;
+    cursor: pointer;
+    transition: .3s ease all;
+    font-size: 1.12em;
+}
+.button-trailer:hover{
+    background: rgba(0, 0, 0, 0.548);
+}
+
 /* ------------------------- MEDIA QUERIES -----------------------------*/
 @media screen and (max-width: 800px) {
 
