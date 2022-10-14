@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U N I V E R S A L / login</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="login.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body>
+    <section class="email0">
+        <form class="email">
+            <p class="title">Iniciar sesión</p>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label text-white">Email</label>
+                <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label text-white">Password</label>
+                <input type="password" class="form-control" id="password">
+            </div>
+            
+            
+            <button type="button" class="btn  mt-3 w-100" data-bs-toggle="modal"
+            data-bs-target="#Modal"><p class="theater">¿Primera vez en U N I V E R S A L  Movie Theater?</p><a class="bill " href="#modal">crear cuenta</a></button>
+        </button>
+        <button type="submit" id="loginButton" class="button btn btn-light">Iniciar sesion</button>
+    </form>
+</section>
+        <section>
+            <!-- Modal -->
+            <div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="ModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title" id="ModalLabel">Crear cuenta</h2>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal1 modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Name:</label>
+                                <input type="text" class="form-control" placeholder="nombre" id="nameRegister"
+                                aria-describedby="emailHelp">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Email:</label>
+                                <input type="email" class="form-control" placeholder="julian@example.com"
+                                id="emailRegister" aria-describedby="emailHelp">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Password:</label>
+                                <input type="password" class="form-control" placeholder="*********"
+                                id="passwordRegister">
+                            </div>
+                        </form>
+                    </div>
+                    <div class=" modal2 modal-footer">
+                        <button type="submit" class="btn btn-light mt-2 w-100" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal" id="registerButton">Crear Cuenta</button>
+                    </button>
+                </div>
+            </div>
+            <script src="login.js"></script>
+        </div>
+    </div>
+</section>
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
+</body>
+</html>

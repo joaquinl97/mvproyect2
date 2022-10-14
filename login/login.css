@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Cantarell:wght@700&display=swap');
+body{
+    
+   background: rgb(47, 30, 53) url(imagenes/ima.png) ;
+}
+.moon{
+    margin-top: 18%;
+    margin-left: 5%;
+}
+.email{
+    padding: 30px;
+    width: 400px;
+    height: 450px;
+   margin-top: 10%;
+   display: flex;
+   flex-direction: column;
+   border: 3px solid ;
+   border-radius: 20px;
+   background-color:  rgba(125, 110, 131, 0.56);
+   
+}
+.email0{
+    margin-bottom: 10%;
+    position: fixed;
+     left: 35%;
+     top: 10%;
+    
+}
+.theater{
+    font-size: 13px;
+    color: black;
+    
+}
+.bill{
+    text-decoration: none;
+    color: aliceblue;
+  
+}
+.button{
+    margin-top: 5px;
+}
+.button:hover{
+    transition: 1s;
+    background-color: rgb(208, 184, 168);
+}
+.title{
+    font-family: 'Cantarell', sans-serif;
+    font-size: 30px;
+    color: rgb(249, 245, 235);
+}
+
+.modal0{
+    background-color: rgb(125, 110, 131);
+}
+.modal1{
+    background-color: rgb(125, 110, 131);
+}
+.modal2{
+    background-color: rgb(125, 110, 131);
+}
+.modal{
+    border-radius: 5%;
+}
+@media (max-width: 768px){
+    .email0{
+        margin-bottom: 10%;
+        position: fixed;
+         left: 25%;
+         top: 10%;
+        
+    } 
+}
+@media (max-width: 590px){
+    .email0{
+        margin-bottom: 10%;
+        position: fixed;
+         left: 15%;
+         top: 10%;
+        
+    } 
+}
+@media (max-width: 460px){
+    .email0{
+        margin-bottom: 10%;
+        position: fixed;
+         left: 8%;
+         top: 10%;
+        
+    } 
+    .email{
+        width: 350px;
+        height: 450px;
+    
+       
+    }
+}
+@media (max-width: 390px){
+    .email0{
+        margin-bottom: 10%;
+        position: fixed;
+         left: 2%;
+         top: 10%;
+        
+    } 
+    .email{
+        width: 350px;
+        height: 450px;
+    
+       
+    }
+}
