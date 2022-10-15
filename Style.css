@@ -1,3 +1,10 @@
+body{
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
+
+}
+
 /* Aqui comienza navbar */
 header {
   z-index: 1;
@@ -5,49 +12,32 @@ header {
   display: flex;
   justify-content: center;
   background-attachment: fixed;
-   box-shadow: var(--shd, 0 0 10px rgba(0, 0, 0, .5));
+  box-shadow: var(--shd, 0 0 10px rgba(0, 0, 0, .5));
+  
 }
 
 .navbar-content {
   width: 80%;
+ 
+  
 }
 
-.img-navbar-brand {
-  width: 70px;
+.imgNavbarMov {
+  width: 150px;
 }
 
-.navbar-form {
-  border-radius: 0;
-  border: none;
-  background-color: white;
-}
+
 
 .navbar-button {
-  border: solid 1px white;
+  border: solid 1px rgb(208, 184, 168);
   border-radius: 0;
   background-color: black;
-  padding: 7px;
-}
-
-.navbar-button:hover {
-  background-color: rgb(71, 70, 70);
-}
-
-.search-icon {
-  width: 25px;
+  padding: 2px;
 }
 
 /* Fin de CSS de navbar  */
 
-video{
-  position: fixed;
-  min-width: 100%;
-  min-height: 100%;
-  top:50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  z-index: -1;
-}
+
 
 
 /* footer */
