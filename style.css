@@ -5,7 +5,8 @@ header {
     display: flex;
     justify-content: center;
     background-attachment: fixed;
-    background-color:#7D6E83;
+    /* background-color:#7D6E83; */
+    background-color:rgba(0, 0, 0, 0.875);
      box-shadow: var(--shd, 0 0 10px rgba(0, 0, 0, .5));
   }
   

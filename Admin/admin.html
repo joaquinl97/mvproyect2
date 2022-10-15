@@ -17,15 +17,21 @@
     <!-- Aqui empieza el código del navbar  -->
     <nav class="navbar-content navbar navbar-expand-lg navbar navbar-dark pt-3 pb-3 ">
       <div class="container-fluid">
+        <!-- <div>
+          <img src="./adminImages/icon2.png" alt="" height="200px">
+        </div> -->
         <div class="d-flex">
-        <div>
-          <img src="../main/universal.png" alt="" height="50px">
+          <!-- <div>
+            <img src="../main/universal.png" alt="" height="50px">
+          </div> -->
+          <div>
+            <img src="./adminImages/icon4.png" alt="" height="60px">
+          </div>
+          <!-- <div class="text-center">
+            <h4 class="m-0 text-black">UNIVERSAL</h4>
+            <b class="">MOVIE THEATER</b>
+          </div> -->
         </div>
-        <div class="text-center">
-          <h4 class="m-0 ">UNIVERSAL</h4>
-          <b class="">MOVIE THEATER</b>
-        </div>
-      </div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -46,7 +52,7 @@
         </div>
       </div>
     </nav>
-    
+
 
 
   </header>
@@ -54,17 +60,22 @@
 
   <main>
 
-    <div class="m-5">
+    <div class="introAdmin">
       <h3>Administración de contenido</h3>
       <p>En la tabla que se muestra a continuación, se muestran todos los datos almacenados en el servidor. Se pueden
         agregar nuevos lanzamientos presionando el botón "Nueva película". Además es posible eliminar o editar las que
         ya están cargadas desde la sección "Acciones". </p>
     </div>
 
-
-    <section class="newFilmButton" data-bs-toggle="modal" data-bs-target="#exampleModal">
-      <button class="btn btn-dark">Nueva película</button>
-    </section>
+    <div class=" d-flex ">
+      <section class="newFilmButton my-0" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <button class="btn btn-dark">+</button>
+      </section>
+      <section class="search">
+        <input type="text" class="searchInput form-control" placeholder="Buscar" aria-label="Recipient's username"
+          aria-describedby="button-addon2" id="searchMovie">
+      </section>
+    </div>
     <section>
       <!-- Vertically centered modal -->
       <!-- Modal -->
@@ -173,8 +184,8 @@
                 <label class="custom-control-label" for="publicadaInput">Publicada</label>
               </div>
               <div class="custom-control custom-switch form-group form-check my-1">
-                <input type="checkbox" onclick="favFunction()" class="custom-control-input color3" name="destacadaInputUpdate"
-                  id="destacadaInputUpdate">
+                <input type="checkbox" onclick="favFunction()" class="custom-control-input color3"
+                  name="destacadaInputUpdate" id="destacadaInputUpdate">
                 <label class="custom-control-label" for="destacadaInput">Destacada</label>
               </div>
             </div>
@@ -203,7 +214,7 @@
             </tr>
           </thead>
           <tbody class="tableBody" id="viewMoviesAdmin">
-        
+
 
           </tbody>
         </table>

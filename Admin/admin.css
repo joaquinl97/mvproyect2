@@ -2,11 +2,28 @@
     margin: 0;
     padding: 0;
 }
+.introAdmin{
+    background-color: rgb(108, 105, 105);
+    padding: 10px;
+    margin: 40px;
+    color: white;
+}
 .newFilmButton{
     /* background-color: aqua; */
     /* width: 100%; */
     margin-left: 40px;
     margin-top: 40px;
+}
+.addSearchContainer{
+    width: 100%;
+}
+.search{
+    margin-right: 40px;
+    margin-left: 10px;
+    width: 100%;
+}
+.searchInput{
+    width: 100%;
 }
 .adminTable{
     /* background-color: aqua; */
@@ -50,6 +67,9 @@
     background-color: rgb(57, 57, 57);
     color: white;
 }
+.highlighted{
+    background-color:#7D6E83 ;
+}
 .tableSection{
     margin-left:40px ;
     margin-right:40px ;
@@ -60,12 +80,14 @@
 .editDelFavButtons{
     /* height: 57.5px; */
     align-items: center;
+    /* height: 65px; */
     
-    
+    /* border: none; */
    
 }
 .rowAdmin{
-    
+    height: 45px;
+    /* border: none; */
 }
 /* .rowAdmin{
     height: 53.29px;

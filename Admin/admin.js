@@ -64,7 +64,7 @@ const readFunction = () => {
     let showMovies = []
     movies.map((item) => {
         showMovies.push(`
-        <tr class="rowAdmin ${item.destacadaInput == true ? 'bg-warning text-dark' : 'bg-dark'}   ">
+        <tr class="rowAdmin ${item.destacadaInput == true ? 'highlighted text-dark' : 'tableBody'}   ">
               <th scope="row">${item.id}</th>
               <td>${item.filmNameAdmin}</td>
               <td>${item.optionsAdmin}</td>
@@ -82,8 +82,6 @@ const readFunction = () => {
                     alt=""></button>
                 <button class="btn btn-light p-1 mx-1" data-bs-toggle="modal" data-bs-target="#updateModal" onclick="viewUpdate('${item.id}')"><img class="trashImg" src="adminImages/edit.png"
                     alt=""></button>
-              
-
               </td>
             </tr>
         `)
@@ -133,7 +131,7 @@ const updateFunction = () => {
                 imageAdmin: imageAdminUpdate.value,
                 videoAdmin: videoAdminUpdate.value,
                 publicadaInput: publicadaInputUpdate.checked,
-              
+
                 cover: coverUpdate.value,
             })
 
@@ -144,7 +142,7 @@ const updateFunction = () => {
 
             updateFunction.push({
                 ...item,
-                
+
             })
 
         }
@@ -189,21 +187,21 @@ const favFunction = () => {
 
 //         if (movies[i].destacadaInput== true) {
 //             fav.push({
-                
+
 //                 destacadaInput:true,
 //             })
 //         } else {
 //             fav.push({
-                
+
 //                 destacadaInput:false,
 //             })
-            
+
 //         }
-        
-        
+
+
 //     }
 //     localStorage.setItem('movies', JSON.stringify(fav))
-    
+
 //     readFunction()
 // }
 
@@ -211,11 +209,11 @@ const favFunction = () => {
 //     let fac=[]
 //     movies.map((item) =>{
 //         if (condition) {
-            
+
 //         }
 
 //     })
-    
+
 // }
 
 
@@ -235,5 +233,75 @@ const deleteFunction = (id) => {
     movies = JSON.parse(localStorage.getItem('movies')) || []
     readFunction()
 }
+
+
+//A continuacion se presenta la funcion Filter que permite buscar en tiempo real las notas almacenadas.
+
+let searchMovie = document.getElementById('searchMovie')
+// let boton = document.getElementById('boton') 
+let result= document.getElementById('viewMoviesAdmin')
+
+function Filter() {
+    let movies = JSON.parse(localStorage.getItem('movies'))
+
+
+    result.innerHTML =''
+    let text=searchMovie.value.toLowerCase()
+
+    for (let i = 0; i < movies.length; i++) {
+        let movie=movies[i].filmNameAdmin.toLowerCase()
+
+        if (movie.indexOf(text)!==-1) {
+            result.innerHTML+=(`
+            <tr class="rowAdmin ${movies[i].destacadaInput == true ? 'highlighted text-dark' : 'tableBody'}   ">
+              <th scope="row">${movies[i].id}</th>
+              <td>${movies[i].filmNameAdmin}</td>
+              <td>${movies[i].optionsAdmin}</td>
+              <td>
+
+                <div class="adminOverflow">
+                  ${movies[i].descriptionAdmin}
+                </div>
+
+              </td>
+              <td>${movies[i].publicadaInput == true ? 'SI' : 'NO'}</td>
+              <td>${movies[i].destacadaInput == true ? 'SI' : 'NO'}</td>
+              <td class="editDelFavButtons d-flex">
+                <button class="btn btn-light p-1 mx-1" onclick="deleteFunction('${movies[i].id}')" ><img class="trashImg" src="adminImages/trash-can.png"
+                    alt=""></button>
+                <button class="btn btn-light p-1 mx-1" data-bs-toggle="modal" data-bs-target="#updateModal" onclick="viewUpdate('${movies[i].id}')"><img class="trashImg" src="adminImages/edit.png"
+                    alt=""></button>
+              </td>
+            </tr>
+
+
+
+
+
+
+
+
+            
+            `
+        )} 
+
+        
+    }
+    if (result.innerHTML === '') {
+        result.innerHTML+=(`
+        <p>Pelicula no encontrada...</p>
+        `
+        
+    )} else {
+        
+    }
+
+    
+}
+
+// boton.addEventListener('click',Filter)
+searchMovie.addEventListener('keyup',Filter)
+
+Filter()
 
 
