@@ -154,19 +154,35 @@ main{
     min-width: 20%;
     transition: .2s ease all;
     box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
-    pointer-events: none;
-}    
-.movies.hover{
-    transform: scale(1.2);   /* para que no se agrande apenas ponga el cursor arriba, si no que lo haga progresivo */
-    transform-origin: center; /* para que se agrande desde el centro */
-}
+    position: relative;
+    cursor: pointer;
+    /* pointer-events: none; */
+}   
 .movies img{
     width: 100%;
-    vertical-align: top;
-}   
+    vertical-align: top; 
+    transition: all 500ms ease-out;
+} 
+.moviesDescription{
+    display: none;
+    position: absolute;
+    top: 0;
+    background: rgba(113, 79, 126, 0.795);
+    color: rgb(248, 237, 227);
+    min-height: 100vh;
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+}
+.movies:hover .moviesDescription{
+    display: block;
+}
 
 /* --------------------------- BOTON DE VER TRAILERS DE CADA PELICULA -------------------------------------------- */
 .trailerMovie{
+    position: relative;
     display: flex;
     justify-content: center;
     background-color: rgba(255, 255, 255, 0.178);
@@ -182,7 +198,7 @@ main{
 }
 .trailerMovie:hover{
     background: rgba(0, 0, 0, 0.548);
-    color: rgb(248, 237, 227);
+    color: rgb(248, 237, 227);    
 } 
 
 /* ------------------------- MEDIA QUERIES -----------------------------*/
@@ -206,6 +222,55 @@ main{
     .indicators, .left-arrow, .right-arrow{
         display: none;
     } 
+    .moviesDescription{
+        font-size: 7px;  
+    }
+}
+@media screen and (max-width: 2000px) {
+    .moviesDescription{
+        font-size: 18px;      
+    }
+}
+@media screen and (min-width: 2000px) {
+    .moviesDescription{
+        font-size: 18px;      
+    }
+}
+@media screen and (max-width: 1450px) {
+    .moviesDescription{
+        font-size: 16px;      
+    }
+}
+@media screen and (max-width: 1300px) {
+    .moviesDescription{
+        font-size: 12px;      
+    }
+}
+@media screen and (max-width: 1000px) {
+    .moviesDescription{
+        font-size: 10px;      
+    }
+}
+@media screen and (max-width: 550px) {
+    .moviesDescription{
+        font-size: 7px;    
+    }
+    .trailerMovie{
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 400px) {
+    .moviesDescription{
+        font-size: 5px;    
+    }
+}
+@media screen and (max-width: 300px) {
+    .moviesDescription{
+        font-size: 3px;    
+    }
+    .trailerMovie{
+        font-size: 12px;
+    }
 }
 
 /* ----------------------- PAGINA ERROR 404 ---------------------- */
