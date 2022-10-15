@@ -26,7 +26,7 @@ exitButton.addEventListener('click', () => {
 function SessionSeVence() {
     setTimeout(() => {
         ExitSesion()
-    }, 120000);
+    }, 12000);
 }
 
 function ExitSesion() {

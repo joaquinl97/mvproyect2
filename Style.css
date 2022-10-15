@@ -17,16 +17,12 @@ header {
 }
 
 .navbar-content {
-  width: 80%;
- 
-  
+  width: 90%; 
 }
 
 .imgNavbarMov {
-  width: 150px;
+  width: 180px;
 }
-
-
 
 .navbar-button {
   border: solid 1px rgb(208, 184, 168);
