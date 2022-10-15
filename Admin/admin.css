@@ -20,7 +20,7 @@
 .search{
     margin-right: 40px;
     margin-left: 10px;
-    width: 100%;
+    width: 200px;
 }
 .searchInput{
     width: 100%;
@@ -96,3 +96,9 @@
     height: 53.29px;
 
 } */
+
+@media (max-width: 800px){
+    .search{
+        width: 100%;
+    }
+  }
