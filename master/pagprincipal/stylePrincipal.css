@@ -279,13 +279,11 @@ body {
     padding: 0;
     background-color: rgb(125, 110, 131)
 }
-/* #1a1a1a; */
 .container404 {
     position: fixed;
     top: 4em;
     width: 100%;
     text-align: center;
-
 }
 .container404-img {
     width: 100%;
@@ -298,7 +296,6 @@ body {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-
 }
 .container404-img img {
     width: 300px;
