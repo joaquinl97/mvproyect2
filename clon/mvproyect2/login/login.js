@@ -34,12 +34,11 @@ registerButton.addEventListener ('click', () => {
 //Function login 
 loginButton.addEventListener("click", (e) => {
     e.preventDefault();
-    let emaillog = emailLogin.value;
-    let passwordlog = passwordLogin.value;
+    let email = emailLogin.value;
+    let pass = passwordLogin.value;
     if (emailLogin.value != "" && passwordLogin.value != "") {
         let logged = false;
         let response = JSON.parse(localStorage.getItem("users"));
-        
         let userSesion = response.map((item) => {
             if (item.email === emailLogin.value && item.password === passwordLogin.value) {
                 let update = {
@@ -52,16 +51,18 @@ loginButton.addEventListener("click", (e) => {
                 return item;
             }
         })
-        // Logea admin o usuario
-        if (logged) {
-            if (emaillog == "admin" && passwordlog == "admin" || emaillog == "admin1" && passwordlog == "admin1" || emaillog == "admin2" && passwordlog == "admin2") {
-                swal ("aaa", "admin", "success");
+
+        if (logged) { // Aca van las cuentas admin, antes hay que crearlas desde el registrar para que funcionen
+            if (emailLogin.value == "admin" && passwordLogin.value == "admin" || emailLogin.value == "admin1" && passwordLogin.value == "admin1"){
+                // DIRECCION HTML DE LA PAGINA ADMIN
+                window.location.href = "";
+                
             }
             else {
-                swal ("aaa", "usuario", "success")
-                // esto hace ingresar a la pagina pero lo dejo comentado
-                /*localStorage.setItem("users", JSON.stringify(userSesion));
-                window.location.href = "/logueado/index.html"*/
+                localStorage.setItem("users", JSON.stringify(userSesion));
+                // DIRECCION HTML DE LA PAGINA USER
+                window.location.href = "";
+                
             }
             
         } else {
