@@ -12,6 +12,22 @@
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <title>HomePage</title>
+    <script src="https://kit.fontawesome.com/b934389cc9.js" crossorigin="anonymous"></script>
+    <!-- TIPOGRAFIA  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:wght@200&family=Open+Sans:wght@400;600&family=Square+Peg&display=swap"
+        rel="stylesheet" />
+
+    <!-- NEW -->
+    <script src="http://code.jquery.com/jquery-latest.js"></script> <!-- para el JS de las flechas del slider -->
+    <!-- END NEW -->
+
 </head>
 
 <body>
@@ -22,15 +38,15 @@
             <div class="container-fluid">
                 <div class="d-flex">
 
-                <div>
-                    <img src="../main/universal.png" alt="" height="50px">
-                </div>
-                <div class="text-center">
-                    <h4 class="m-0 text-black">UNIVERSAL</h4>
-                    <b class="">MOVIE THEATER</b>
+                    <div>
+                        <img src="../main/universal.png" alt="" height="50px">
+                    </div>
+                    <div class="text-center">
+                        <h4 class="m-0 text-black">UNIVERSAL</h4>
+                        <b class="">MOVIE THEATER</b>
 
+                    </div>
                 </div>
-            </div>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -57,13 +73,20 @@
     </header>
 
 
-    <main>
+    <main class="main-hp">
+        <!-- NEW -->
+        <!-- BOTON PARA SUBIR ARRIBA -->
+        <div class="go-up">
+            <i class="fa-solid fa-angle-up"></i>
+        </div>
+        <!-- END NEW -->
+
         <section id="coverImage">
 
         </section>
 
 
-        <div>
+        <!-- <div>
             <h4>Ficcion</h4>
         </div>
         <section id="fictionMovies" class="d-flex flex-wrap justify-content-evenly">
@@ -92,12 +115,168 @@
         </div>
         <section id="dramaMovies" class="d-flex flex-wrap justify-content-evenly">
 
-        </section>
+        </section> -->
+
+
+        <!-- NEW -->
+        <!-- ultimos lanzamientos= launch  -->
+        <div class="last-launch">
+            <h3>Nuestros ultimos lanzamientos | Miralos todos:</h3>
+        </div>
+        <!-- PRIMER SLIDER -->
+        <div class="container-title">
+            <h4>Ficcion</h4>
+        </div>
+        <div class="main-container" id="">
+            <div class="main-container-slider">
+                <button role="button" id="left-arrow1" class="left-arrow">
+                    <i class="fa-solid fa-angle-left"></i>
+                </button>
+
+                <div class="container-slider" id="container-slider1">
+
+                    <div class="slider " id="fictionMovies">
+
+
+
+
+
+                    </div>
+                </div>
+
+                <button role="button" id="right-arrow1" class="right-arrow">
+                    <i class="fa-solid fa-angle-right"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- SEGUNDO SLIDER -->
+        <div class="container-title">
+            <h4>Terror</h4>
+        </div>
+        <div class="main-container" id="">
+            <div class="main-container-slider">
+                <button role="button" id="left-arrow2" class="left-arrow">
+                    <i class="fa-solid fa-angle-left"></i>
+                </button>
+
+                <div class="container-slider" id="container-slider2">
+
+                    <div class="slider " id="horrorMovies">
+
+
+
+
+
+                    </div>
+                </div>
+
+                <button role="button" id="right-arrow2" class="right-arrow">
+                    <i class="fa-solid fa-angle-right"></i>
+                </button>
+            </div>
+        </div>
+        <!-- TERCER SLIDER -->
+        <div class="container-title">
+            <h4>Comedia</h4>
+        </div>
+        <div class="main-container" id="">
+            <div class="main-container-slider">
+                <button role="button" id="left-arrow3" class="left-arrow">
+                    <i class="fa-solid fa-angle-left"></i>
+                </button>
+
+                <div class="container-slider" id="container-slider3">
+
+                    <div class="slider " id="comedyMovies">
+
+
+
+
+
+                    </div>
+                </div>
+
+                <button role="button" id="right-arrow3" class="right-arrow">
+                    <i class="fa-solid fa-angle-right"></i>
+                </button>
+            </div>
+        </div>
+
+          <!-- CUARTO SLIDER -->
+          <div class="container-title">
+            <h4>Musical</h4>
+        </div>
+        <div class="main-container" id="">
+            <div class="main-container-slider">
+                <button role="button" id="left-arrow4" class="left-arrow">
+                    <i class="fa-solid fa-angle-left"></i>
+                </button>
+
+                <div class="container-slider" id="container-slider4">
+
+                    <div class="slider " id="musicalMovies">
+
+
+
+
+
+                    </div>
+                </div>
+
+                <button role="button" id="right-arrow4" class="right-arrow">
+                    <i class="fa-solid fa-angle-right"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- QUINTO SLIDER -->
+        <div class="container-title">
+            <h4>Drama</h4>
+        </div>
+        <div class="main-container" id="">
+            <div class="main-container-slider">
+                <button role="button" id="left-arrow5" class="left-arrow">
+                    <i class="fa-solid fa-angle-left"></i>
+                </button>
+
+                <div class="container-slider" id="container-slider5">
+
+                    <div class="slider " id="dramaMovies">
+
+
+
+
+
+                    </div>
+                </div>
+
+                <button role="button" id="right-arrow5" class="right-arrow">
+                    <i class="fa-solid fa-angle-right"></i>
+                </button>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+        <!-- END NEW -->
+        <h1>AAAAAAA</h1>
+
+
+
+
+
     </main>
 
 
     <script src="./app.js"></script>
-    <!-- <script src="./Admin/admin.js"></script> -->
+
 
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
