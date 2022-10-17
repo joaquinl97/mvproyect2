@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
+  <link rel="stylesheet" href="admin.css">
+  <link rel="stylesheet" href="../style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+
+<body>
+
+  <header class=" ">
+    <!-- Aqui empieza el código del navbar  -->
+    <nav class="navbar-content navbar navbar-expand-lg navbar navbar-dark pt-3 pb-3 ">
+      <div class="container-fluid">
+        <!-- <div>
+          <img src="./adminImages/icon2.png" alt="" height="200px">
+        </div> -->
+        <div class="d-flex">
+          <!-- <div>
+            <img src="../main/universal.png" alt="" height="50px">
+          </div> -->
+          <div>
+            <img src="./adminImages/icon4.png" alt="" height="60px">
+          </div>
+          <!-- <div class="text-center">
+            <h4 class="m-0 text-black">UNIVERSAL</h4>
+            <b class="">MOVIE THEATER</b>
+          </div> -->
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav position-absolute end-0 me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Admin</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+            </li>
+            <button type="button" class="btn btn btn-light logOutButton" id="exitButton">
+              Cerras Sesion
+            </button>
+          </ul>
+
+        </div>
+      </div>
+    </nav>
+
+
+
+  </header>
+
+
+  <main>
+
+    <div class="introAdmin">
+      <h3>Administración de contenido</h3>
+      <p>En la tabla que se visualiza a continuación, se muestran todos los datos almacenados en el servidor. Se pueden
+        agregar nuevos lanzamientos presionando el botón "+". Además es posible eliminar o editar las que
+        ya están cargadas desde la sección "Acciones". </p>
+    </div>
+
+    <div class=" d-flex ">
+      <section class="newFilmButton my-0" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <button class="btn btn-dark">+</button>
+      </section>
+      <section class="search">
+        <input type="text" class="searchInput form-control" placeholder="Buscar" aria-label="Recipient's username"
+          aria-describedby="button-addon2" id="searchMovie">
+      </section>
+    </div>
+    <section>
+      <!-- Vertically centered modal -->
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Nueva película</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="filmNameAdmin">
+              </div>
+              <div class="mb-3">
+                <label for="" class="form-label">Categoría</label>
+                <select class="form-select" aria-label="Default select example" id="optionsAdmin">
+                  <option selected>Seleccionar</option>
+                  <option value="Ficcion">Ciecia ficción</option>
+                  <option value="Terror">Terror</option>
+                  <option value="Comedia">Comedia</option>
+                  <option value="Musical">Musical</option>
+                  <option value="Drama">Drama</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Descripción</label>
+                <textarea class="form-control" id="descriptionAdmin" rows="3"></textarea>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Portada</label>
+                <input type="text" class="form-control" id="imageAdmin" aria-describedby="emailHelp">
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Url del trailer</label>
+                <input type="text" class="form-control" id="videoAdmin" aria-describedby="emailHelp">
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Url cover</label>
+                <input type="text" class="form-control" id="cover" aria-describedby="emailHelp">
+              </div>
+              <div class="custom-control custom-switch form-group form-check my-1">
+                <input type="checkbox" class="custom-control-input color3" name="publicadaInput" id="publicadaInput">
+                <label class="custom-control-label" for="publicadaInput">Publicada</label>
+              </div>
+              <!-- <div class="custom-control custom-switch form-group form-check my-1">
+                <input type="checkbox" class="custom-control-input color3" name="destacadaInput" id="destacadaInput">
+                <label class="custom-control-label" for="destacadaInput">Destacada</label>
+              </div> -->
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+              <button type="button" id="buttonSaveAdmin" class="btn btn-primary">Guardar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Update modal -->
+    <section>
+      <div class="modal fade" id="updateModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Update Note</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="filmNameAdminUpdate">
+              </div>
+              <div class="mb-3">
+                <label for="" class="form-label">Categoría</label>
+                <select class="form-select" aria-label="Default select example" id="optionsAdminUpdate">
+                  <option selected>Seleccionar</option>
+                  <option value="Ficcion">Ciecia ficción</option>
+                  <option value="Terror">Terror</option>
+                  <option value="Comedia">Comedia</option>
+                  <option value="Musical">Musical</option>
+                  <option value="Drama">Drama</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Descripción</label>
+                <textarea class="form-control" id="descriptionAdminUpdate" rows="3"></textarea>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Portada</label>
+                <input type="text" class="form-control" id="imageAdminUpdate" aria-describedby="emailHelp">
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Url del trailer</label>
+                <input type="text" class="form-control" id="videoAdminUpdate" aria-describedby="emailHelp">
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Url cover</label>
+                <input type="text" class="form-control" id="coverUpdate" aria-describedby="emailHelp">
+              </div>
+              <div class="custom-control custom-switch form-group form-check my-1">
+                <input type="checkbox" class="custom-control-input color3" name="publicadaInputUpdate"
+                  id="publicadaInputUpdate">
+                <label class="custom-control-label" for="publicadaInput">Publicada</label>
+              </div>
+              <div class="custom-control custom-switch form-group form-check my-1">
+                <input type="checkbox" onclick="favFunction()" class="custom-control-input color3"
+                  name="destacadaInputUpdate" id="destacadaInputUpdate">
+                <label class="custom-control-label" for="destacadaInput">Destacada</label>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="submit" onclick="updateFunction()" class="btn btn-dark w-100">Update
+                note</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="tableSection">
+      <div class="table-responsive">
+        <table class="adminTable  table">
+          <thead class="tableHead">
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Película</th>
+              <th scope="col">Categoria</th>
+              <th scope="col">Descripción</th>
+              <th scope="col">Publicada</th>
+              <th scope="col">Destacada</th>
+              <th scope="col">Acciones</th>
+            </tr>
+          </thead>
+          <tbody class="tableBody" id="viewMoviesAdmin">
+
+
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+  <footer></footer>
+  <script src="./admin.js"></script>
+
+  <!-- <script src="../app.js"></script> -->
+  <!-- <script src="./app.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
