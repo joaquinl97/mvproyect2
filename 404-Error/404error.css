@@ -1,0 +1,113 @@
+/* ----------------------- PAGINA ERROR 404 ---------------------- */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    background-image: url(https://images.adsttc.com/media/images/5f7d/fef2/63c0/170a/9100/0273/large_jpg/Jiangnan_Photography.jpg?1602092773);
+    /* background-repeat: no-repeat; */
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+.container404 {
+    position: fixed;
+    top: 4em;
+    width: 100%;
+    text-align: center;
+    transform: translateY(200px);
+   
+}
+.container404-img {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.container404-img img {
+    width: 300px;
+    display: block;
+    -webkit-animation: animates 2s linear infinite alternate;
+    animation: animates 2s linear infinite alternate;
+}
+
+.container404-img p {
+    position: absolute;
+    font-size: 5.5rem;
+    font-family: 'Gill Sans', sans-serif;
+    font-weight: 600;
+    top: 9rem;
+    color: rgb(0, 0, 0);
+    -webkit-animation: animatestext 2s linear infinite alternate;
+    animation: animatestext 2s linear infinite alternate;
+}
+.containerDescription p {
+    color: rgb(0, 0, 0);
+    width: 50%;
+    margin: 2em auto;
+    font-family: 'Gill Sans', sans-serif;
+}
+.containerDescription a{
+    background-color: rgb(113, 79, 126);
+    color: rgb(248, 237, 227);
+    font-weight: 600;
+    font-family: 'Gill Sans', sans-serif;
+    padding: 0.8em 1em;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+@media (max-width: 646px) {
+    .container404-img img {
+        width: 200px;
+       
+        
+    }
+    .container404 {
+        transform: translateY(220px);
+       
+    }
+}
+/* @media (max-width: 434px) {
+    .container404-img img{
+        width: 400px;
+    }
+  }
+  @media (max-width: 300px) {
+    .container404-img img{
+        width: 300px;
+    }
+  }
+
+  @media (max-width: 1692px) {
+    .container404-img {
+        max-width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translateY(10px);
+        margin-left: 97px;
+    }
+  }
+
+  @media (max-width: 430px) {
+    .container404-img {
+        max-width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translateY(93px);
+        margin-left: 57px;
+    }
+    .video404{
+        max-width: 350px;
+    }
+    .containerDescription{
+        margin-top: 60px;
+    }
+  } */

@@ -7,15 +7,6 @@ function createCover() {
     movies.map((item) => {
         if (item.destacadaInput == true) {
             coverImageAbout.push(`
-         
-
-
-
-
-
-
-
-
             <div class="principal-movie" style="background-image: url(${item.cover});">
         <div class="text-top">
           <h1 class="animate__animated animate__fadeInDown">${item.filmNameAdmin}</h1>  
@@ -41,19 +32,15 @@ function createCover() {
             </div>
           </div>
           <!-- boton de mas informacion -->
-          <a href="">
+          <a href="./404-Error/404error.html">
             <button role="button" class="button-play animate__animated animate__fadeInDown">
               <i class="fa-solid fa-circle-info"></i> Más información
             </button>
           </a>
         </div>
-      </div>
-            
+      </div>         
             `)
-
         }
-
-
     })
     coverImage.innerHTML = coverImageAbout.join('')
 
@@ -97,6 +84,7 @@ function fictionFunction() {
             <div class="movie">         
             <img src="${item.imageAdmin}" alt="" />
             <div class="moviesDescription">
+            <b>${item.filmNameAdmin}</b>
               <p>${item.descriptionAdmin}</p>
             </div>
             <a class="trailerMovie" href="${item.videoAdmin}">Ver Trailer</a>
@@ -138,6 +126,7 @@ function horrorFunction() {
             <div class="movie">         
             <img src="${item.imageAdmin}" alt="" />
             <div class="moviesDescription">
+            <b>${item.filmNameAdmin}</b>
               <p>${item.descriptionAdmin}</p>
             </div>
             <a class="trailerMovie" href="${item.videoAdmin}">Ver Trailer</a>
@@ -177,6 +166,7 @@ function comedyFunction() {
             <div class="movie">         
             <img src="${item.imageAdmin}" alt="" />
             <div class="moviesDescription">
+            <b>${item.filmNameAdmin}</b>
               <p>${item.descriptionAdmin}</p>
             </div>
             <a class="trailerMovie" href="${item.videoAdmin}">Ver Trailer</a>
@@ -217,6 +207,7 @@ function musicalFunction() {
             <div class="movie">         
             <img src="${item.imageAdmin}" alt="" />
             <div class="moviesDescription">
+            <b>${item.filmNameAdmin}</b>
               <p>${item.descriptionAdmin}</p>
             </div>
             <a class="trailerMovie" href="${item.videoAdmin}">Ver Trailer</a>
@@ -258,6 +249,7 @@ function dramaFunction() {
             <div class="movie">         
             <img src="${item.imageAdmin}" alt="" />
             <div class="moviesDescription">
+            <b>${item.filmNameAdmin}</b>
               <p>${item.descriptionAdmin}</p>
             </div>
             <a class="trailerMovie" href="${item.videoAdmin}">Ver Trailer</a>
@@ -274,3 +266,21 @@ function dramaFunction() {
 
 }
 dramaFunction()
+
+
+// BOTON QUE LLEVA HACIA ARRIBA
+$(document).ready(function(){
+	$('.go-up').click(function(){
+		$('body, html').animate({
+			scrollTop: '0px'
+		}, 300);
+	});
+
+	$(window).scroll(function(){
+		if( $(this).scrollTop() > 0 ){
+			$('.go-up').slideDown(300);
+		} else {
+			$('.go-up').slideUp(300);
+		}
+	});
+});
