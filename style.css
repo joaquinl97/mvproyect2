@@ -462,4 +462,11 @@ footer {
   }
 }
 
+@media screen and (max-width:576px) {
+  .slider{
+    grid-template-columns: 1fr;
+    place-items: center;
+  }
+}
+
 /* AQUI TERMINA RESPONSIVE FOOTER */
