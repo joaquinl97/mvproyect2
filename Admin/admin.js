@@ -1,3 +1,7 @@
+let exitButton = document.getElementById('exitButton');
+let getUsers = JSON.parse(localStorage.getItem('users')) || [];
+let user = getUsers.find((item) => item.sesion === true) || null;
+
 let filmNameAdmin = document.getElementById("filmNameAdmin");
 let optionsAdmin = document.getElementById("optionsAdmin");
 let descriptionAdmin = document.getElementById("descriptionAdmin");
@@ -305,3 +309,28 @@ searchMovie.addEventListener('keyup',Filter)
 Filter()
 
 
+exitButton.addEventListener('click', () => {
+    ExitSesion()
+  })
+  
+  function SessionSeVence() {
+    setTimeout(() => {
+        ExitSesion()
+    }, 120000);
+  }
+  
+  function ExitSesion() {
+    let response = getUsers.map((item) => {
+        if (item.id === user.id) {
+            let myUser = {
+                ...item,
+                sesion: false
+            }
+            return myUser;
+        } else {
+            return item;
+        }
+    })
+    localStorage.setItem('users', JSON.stringify(response));
+    window.location.href = '/presentation/login/login.html';
+  }

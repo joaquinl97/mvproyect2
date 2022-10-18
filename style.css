@@ -41,6 +41,16 @@ header {
   
   .navbar-content {
     width: 80%;
+    
+  }
+  .containerLogoButton{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  .navbarTogler1{
+    height: 40px;
+    margin-right: 10px;
   }
   
   .img-navbar-brand {

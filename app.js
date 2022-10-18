@@ -1,5 +1,8 @@
 //Cover page
 let coverImage = document.getElementById("coverImage");
+let exitButton = document.getElementById('exitButton');
+let getUsers = JSON.parse(localStorage.getItem('users')) || [];
+let user = getUsers.find((item) => item.sesion === true) || null;
 
 function createCover() {
     let movies = JSON.parse(localStorage.getItem('movies')) || [];
@@ -349,7 +352,7 @@ function ExitSesion() {
       }
   })
   localStorage.setItem('users', JSON.stringify(response));
-  window.location.href = '/login/login.html';
+  window.location.href = '/presentation/login/login.html';
 }
 
 Main()
