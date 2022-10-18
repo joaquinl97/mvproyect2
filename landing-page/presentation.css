@@ -1,0 +1,410 @@
+@import url('https://fonts.googleapis.com/css2?family=Francois+One&family=Kanit:wght@900&display=swap');
+
+.first {
+    background-color: rgb(74, 58, 80);
+}
+
+.video {
+    position: relative;
+}
+
+.marca {
+    position: absolute;
+    bottom: 50%;
+    left: 30%;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.firstbutton {
+    text-decoration: none;
+    color: black;
+    position: relative;
+    left: 30%;
+    background-color: antiquewhite;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.firstbutton:hover {
+    background-color: rgb(125, 110, 131);
+    transition: 1s;
+}
+
+.moon {
+    font-family: 'Kanit', sans-serif;
+    font-size: 95px;
+}
+
+.movie {
+    margin-left: 35%;
+}
+
+.mac {
+    position: relative;
+    left: 10%;
+}
+
+.container {
+    width: 40%;
+    height: 80%;
+    padding: 10%;
+    padding-top: 5%;
+    padding-bottom: 0;
+    margin: 5%;
+    margin-bottom: 0;
+    background-color: rgb(125, 110, 131);
+}
+
+.text1 {
+    display: flex;
+}
+
+.text2 {
+    width: 40%;
+    margin-left: 20%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+}
+
+.text3 {
+    margin-top: 5%;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(208, 184, 168);
+    display: flex;
+    align-items: center;
+}
+
+.mac2 {
+    margin-left: 10%;
+}
+
+.text4 {
+    width: 40%;
+    height: 40%;
+    padding: 3%;
+    margin: 3%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
+}
+
+.icons {
+    display: flex;
+    justify-content: space-between;
+    padding: 1%;
+    margin: 2%;
+    margin-bottom: 0;
+}
+
+.icons1 {
+    position: relative;
+    left: 42%;
+    width: 40%;
+}
+
+.icons2 {
+    position: relative;
+    left: 15%;
+}
+
+.favorite {
+    padding: 5%;
+    margin-left: 17%;
+    font-family: 'Francois One', sans-serif;
+    font-size: 300%;
+}
+
+.icons3 {
+    position: relative;
+    left: 55%;
+}
+
+.icons0 {
+    margin-left: 0px;
+}
+
+/* AQUI COMIENZA FOOTER */
+footer {
+    background-color: black;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 30px;
+}
+
+.categories-footer {
+    display: flex;
+}
+
+.column-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.column-footer a {
+    text-decoration: none;
+    margin: 5px 0;
+}
+
+.column-footer-title {
+    color: white;
+}
+
+.column-footer-content {
+    color: rgb(173, 171, 171);
+}
+
+.column-footer-content:hover {
+    color: rgb(97, 97, 97);
+}
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.app-container p {
+    margin-bottom: 10px;
+    color: white;
+}
+
+.app-down {
+    height: 43px;
+    width: 150px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: solid gainsboro 1px;
+    margin-bottom: 5px;
+}
+
+.line {
+    border: solid 1px rgba(128, 128, 128, 0.585);
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.footer-copyright {
+    color: gray;
+    font-size: 13px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+/* AQUI TERMINA FOOTER */
+@media (max-width: 990px) {
+    .marca {
+        position: absolute;
+        bottom: 55%;
+        left: 23%;
+        color: rgba(255, 255, 255, 0.6);
+    }
+
+    .moon {
+        font-size: 75px;
+
+    }
+
+    .favorite {
+        font-size: 30px;
+        margin-right: 15px
+    }
+}
+
+@media (max-width: 768px) {
+    .marca {
+        position: absolute;
+        bottom: 55%;
+        left: 30%;
+        color: rgba(255, 255, 255, 0.6);
+    }
+
+    .moon {
+        font-size: 45px;
+    }
+
+    .firstbutton {
+        position: relative;
+        left: 20%;
+        background-color: antiquewhite;
+        border: 5px solid antiquewhite;
+        border-radius: 5px;
+    }
+
+    .movie {
+        margin-left: 28%;
+    }
+
+    .text2 {
+        width: 50%;
+        margin-left: 30%;
+        margin-bottom: 30%;
+        font-size: -10%;
+    }
+
+    .text1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mac {
+        margin-right: 60%;
+        width: 60%;
+        border-radius: 50%;
+        padding: 1%;
+    }
+
+
+    .text3 {
+        margin-top: 5%;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(208, 184, 168);
+        font-size: 30%;
+    }
+
+    .mac2 {
+        width: 35%;
+        border-radius: 10%;
+    }
+
+    .favorite {
+        padding: 5%;
+        margin-left: 12%;
+        font-family: 'Francois One', sans-serif;
+        font-size: 130%;
+    }
+
+    .icons1 {
+
+        position: relative;
+        left: 25%;
+        width: 10%;
+        font-size: 100%;
+    }
+
+    .icons0 {
+        font-size: 100%;
+    }
+
+    .icons3 {
+        font-size: 100%;
+        position: relative;
+        left: 45%;
+    }
+
+}
+
+@media (max-width: 590px) {
+    .marca {
+        position: absolute;
+        bottom: 45%;
+        left: 30%;
+        color: rgba(255, 255, 255, 0.6);
+    }
+
+    .marcas1 {
+        font-size: 10px;
+    }
+
+    .moon {
+        font-size: 35px;
+
+    }
+
+    .movie {
+        margin-left: 18%;
+        font-size: 20px;
+    }
+
+    .firstbutton {
+        position: relative;
+        left: 10%;
+        background-color: antiquewhite;
+        border-radius: 5px;
+    }
+}
+
+@media (max-width: 490px) {
+    .marca {
+        position: absolute;
+        bottom: 35%;
+        left: 30%;
+        color: rgba(255, 255, 255, 0.6);
+    }
+
+    .moon {
+        font-size: 25px;
+    }
+
+    .firstbutton {
+        position: relative;
+        left: 3%;
+        background-color: antiquewhite;
+        border-radius: 5px;
+    }
+
+    .movie {
+        margin-left: 18%;
+        font-size: 15px;
+    }
+
+
+    .text3 {
+        margin-top: 5%;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(208, 184, 168);
+    }
+
+    .text5 {
+        font-size: 15px;
+    }
+
+    .text0 {
+        font-size: 25px;
+    }
+
+    .favorite {
+        padding: 5%;
+        margin-left: 12%;
+        font-family: 'Francois One', sans-serif;
+        font-size: 90%;
+    }
+
+    .icons1 {
+
+        position: relative;
+        left: 40%;
+        width: 10%;
+        font-size: 50%;
+    }
+
+    .icons0 {
+        font-size: 55%;
+    }
+
+    .icons3 {
+        font-size: 55%;
+        position: relative;
+        left: 40%;
+    }
+
+    .marcas1 {
+        font-size: 10px;
+    }
+}
+
+/* AQUI COMIENZA RESPONSIVE FOOTER */
+@media (max-width: 768px) {
+    .footer-icons {
+        margin-bottom: 30px;
+    }
+}
+
+/* AQUI TERMINA RESPONSIVE FOOTER */

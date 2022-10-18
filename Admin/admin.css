@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.introAdmin {
+    background-color: rgb(108, 105, 105);
+    padding: 10px;
+    margin: 40px;
+    color: white;
+}
+
+.newFilmButton {
+    margin-left: 40px;
+    margin-top: 40px;
+}
+
+.addSearchContainer {
+    width: 100%;
+}
+
+.search {
+    margin-right: 40px;
+    margin-left: 10px;
+    width: 200px;
+}
+
+.searchInput {
+    width: 100%;
+}
+
+.adminTable {
+    margin-top: 20px;
+}
+
+.adminOverflow {
+    background-color: rgba(128, 128, 128, 0.229);
+    max-width: 600px;
+    overflow-y: scroll;
+    margin: 0;
+    padding: 0;
+    height: 35px;
+}
+
+.tableHead {
+    background-color: rgb(116, 116, 116);
+    color: white;
+    border-color: rgb(144, 144, 144);
+}
+
+.tableBody {
+    background-color: rgb(57, 57, 57);
+    color: white;
+}
+
+.highlighted {
+    background-color: #7D6E83;
+}
+
+.tableSection {
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.trashImg {
+    height: 25px;
+}
+
+.editDelFavButtons {
+    align-items: center;
+}
+
+.rowAdmin {
+    height: 45px;
+}
+
+@media (max-width: 800px) {
+    .search {
+        width: 100%;
+    }
+}
