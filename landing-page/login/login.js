@@ -12,6 +12,7 @@ let registerButton = document.getElementById('registerButton');
 let loginButton = document.getElementById('loginButton');
 
 let users = localStorage.getItem("users") ? JSON.parse(localStorage.getItem("users")) : [];
+let movies = localStorage.getItem("movies") ? JSON.parse(localStorage.getItem("movies")) : [];
 
 //Function  register
 registerButton.addEventListener('click', () => {
@@ -24,6 +25,7 @@ registerButton.addEventListener('click', () => {
             password: passwordRegister.value,
         })
         localStorage.setItem("users", JSON.stringify(users));
+        localStorage.setItem("movies", JSON.stringify(movies));
         name.value = '';
         email.value = '';
         password.value = '';
