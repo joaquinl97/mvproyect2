@@ -284,3 +284,72 @@ $(document).ready(function(){
 		}
 	});
 });
+
+
+
+// NUEVO MICA
+
+function ExitSesion() {
+  let response = getUsers.map((item) => {
+      if (item.id === user.id) {
+          let myUser = {
+              ...item,
+              sesion: false
+          }
+          return myUser;
+      } else {
+          return item;
+      }
+  })
+  localStorage.setItem('users', JSON.stringify(response));
+  
+  
+}
+
+function Main() {
+  SesionOpen()
+
+  if(user.isAdmin){
+    document.querySelector('.js-admin').classList.remove('d-none')
+  }
+}
+
+function SesionOpen() {
+  if (getUsers !== [] && user !== null) {
+      if (user.sesion !== true) {
+        //  window.location.href = '';
+      } else {
+          // SessionSeVence()
+      }
+  } else {
+     // window.location.href = '';
+  }
+}
+
+exitButton.addEventListener('click', () => {
+  ExitSesion()
+})
+
+function SessionSeVence() {
+  setTimeout(() => {
+      ExitSesion()
+  }, 120000);
+}
+
+function ExitSesion() {
+  let response = getUsers.map((item) => {
+      if (item.id === user.id) {
+          let myUser = {
+              ...item,
+              sesion: false
+          }
+          return myUser;
+      } else {
+          return item;
+      }
+  })
+  localStorage.setItem('users', JSON.stringify(response));
+  window.location.href = '/login/login.html';
+}
+
+Main()
