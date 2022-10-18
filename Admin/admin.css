@@ -1,104 +1,81 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
-.introAdmin{
+
+.introAdmin {
     background-color: rgb(108, 105, 105);
     padding: 10px;
     margin: 40px;
     color: white;
 }
-.newFilmButton{
-    /* background-color: aqua; */
-    /* width: 100%; */
+
+.newFilmButton {
     margin-left: 40px;
     margin-top: 40px;
 }
-.addSearchContainer{
+
+.addSearchContainer {
     width: 100%;
 }
-.search{
+
+.search {
     margin-right: 40px;
     margin-left: 10px;
     width: 200px;
 }
-.searchInput{
+
+.searchInput {
     width: 100%;
 }
-.adminTable{
-    /* background-color: aqua; */
+
+.adminTable {
     margin-top: 20px;
-    /* width: 90% !important; */
-    /* text-align: center; */
 }
-/* .table-responsive{
-    background-color: aqua;
-    display: flex;
-    justify-content: center;
-} */
-.adminOverflow{
-    background-color:  rgba(128, 128, 128, 0.229) ;
-    max-width: 600px ;
-    overflow-y: scroll ;
-    margin: 0 ;
-    padding: 0 ;
+
+.adminOverflow {
+    background-color: rgba(128, 128, 128, 0.229);
+    max-width: 600px;
+    overflow-y: scroll;
+    margin: 0;
+    padding: 0;
     height: 35px;
-   
 }
-.containerOverflow{
-    /* background-color: blueviolet !important; */
-    /* margin: 0 !important; */
-    /* padding: 0 !important; */
-    /* max-width: 100px; */
-    /* display: flex; */
-    /* justify-content: center; */
-    /* height: 41.5px; */
-    /* max-width: 200px; */
-    /* height: 53.29px; */
-    
-    
-}
-.tableHead{
-    background-color: rgb(116, 116, 116) ;
+
+.tableHead {
+    background-color: rgb(116, 116, 116);
     color: white;
     border-color: rgb(144, 144, 144);
 }
-.tableBody{
+
+.tableBody {
     background-color: rgb(57, 57, 57);
     color: white;
 }
-.highlighted{
-    background-color:#7D6E83 ;
+
+.highlighted {
+    background-color: #7D6E83;
 }
-.tableSection{
-    margin-left:40px ;
-    margin-right:40px ;
+
+.tableSection {
+    margin-left: 40px;
+    margin-right: 40px;
 }
-.trashImg{
+
+.trashImg {
     height: 25px;
 }
-.editDelFavButtons{
-    /* height: 57.5px; */
+
+.editDelFavButtons {
     align-items: center;
-    /* height: 65px; */
-    
-    /* border: none; */
-   
 }
-.rowAdmin{
+
+.rowAdmin {
     height: 45px;
-    /* border: none; */
 }
-/* .rowAdmin{
-    height: 53.29px;
-}
-.td{
-    height: 53.29px;
 
-} */
-
-@media (max-width: 800px){
-    .search{
+@media (max-width: 800px) {
+    .search {
         width: 100%;
     }
-  }
+}

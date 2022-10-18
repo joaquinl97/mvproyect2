@@ -1,154 +1,146 @@
-/* vicky */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-.body-hp{
+
+.body-hp {
   background-color: rgb(113, 79, 126);
 }
-.main-hp{
+
+.main-hp {
   background-color: rgb(113, 79, 126);
   width: 100%;
   min-height: 100vh;
 }
-/*fin vicky */
 
 /* Boton para ir desde abajo para arriba del todo */
-.go-up{
-	padding:20px;
-	background:rgba(248, 237, 227, 0.568);
-	font-size:20px;
-	color:#fff;
-	cursor:pointer;
-	position: fixed;
-    bottom:20px;
-	right:20px;
-    z-index: 2;
+.go-up {
+  padding: 20px;
+  background: rgba(248, 237, 227, 0.568);
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 2;
 }
 
 /* Aqui comienza navbar */
 header {
-    z-index: 1;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    background-attachment: fixed;
-    /* background-color:#7D6E83; */
-    background-color:rgba(0, 0, 0, 0.875);
-     box-shadow: var(--shd, 0 0 10px rgba(0, 0, 0, .5));
-  }
-  
-  .navbar-content {
-    width: 80%;
-    
-  }
-  .containerLogoButton{
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-  }
-  .navbarTogler1{
-    height: 40px;
-    margin-right: 10px;
-  }
-  
-  .img-navbar-brand {
-    width: 70px;
-  }
-  
-  .navbar-form {
-    border-radius: 0;
-    border: none;
-    background-color: white;
-  }
-  
-  .navbar-button {
-    border: solid 1px white;
-    border-radius: 0;
-    background-color: black;
-    padding: 7px;
-  }
-  
-  .navbar-button:hover {
-    background-color: rgb(71, 70, 70);
-  }
-  
-  .search-icon {
-    width: 25px;
-  }
-  
+  z-index: 1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-attachment: fixed;
+  background-color: rgba(0, 0, 0, 0.875);
+  box-shadow: var(--shd, 0 0 10px rgba(0, 0, 0, .5));
+}
 
-  /* Fin de CSS de navbar  */
-  
-  /* .imgportada{
-    width: 100%;
-    height: 550px;
-    background: url(https://i.pinimg.com/originals/c8/6d/27/c86d276a82e3a331e7a55f1c103bfe0d.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-} */
+.navbar-content {
+  width: 80%;
+}
 
+.containerLogoButton {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
 
+.navbarTogler1 {
+  height: 40px;
+  margin-right: 10px;
+}
 
+.img-navbar-brand {
+  width: 70px;
+}
+
+.navbar-form {
+  border-radius: 0;
+  border: none;
+  background-color: white;
+}
+
+.navbar-button {
+  border: solid 1px white;
+  border-radius: 0;
+  background-color: black;
+  padding: 7px;
+}
+
+.navbar-button:hover {
+  background-color: rgb(71, 70, 70);
+}
+
+.search-icon {
+  width: 25px;
+}
+
+/* Fin de CSS de navbar  */
 /* COVER */
-.principal-movie{
+.principal-movie {
   font-size: 16px;
   min-height: 40.62em;
-  color:  rgb(248, 237, 227);
-  /* background: url(./img/moonlight-canva-gif1.gif); */
+  color: rgb(248, 237, 227);
   background-size: cover;
   margin-bottom: 3.12em;
   display: flex;
   align-items: end;
 }
-.text-top{
-  /*  background-color: rgba(0, 0, 0, 0.219); */
-   margin-bottom: 3.12em;
-   margin-left: 2.0em;
-   margin-right: 2.0em;
+
+.text-top {
+  margin-bottom: 3.12em;
+  margin-left: 2.0em;
+  margin-right: 2.0em;
 }
-.text-top h1{
-   font-family: 'Josefin Sans', sans-serif;
-   font-weight: 600;
-   font-size: 6.25em;
-   margin-bottom: 0.2em;
+
+.text-top h1 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 600;
+  font-size: 6.25em;
+  margin-bottom: 0.2em;
 }
-.text-top p{
-   font-family: 'Open Sans', sans-serif;
-   font-weight: normal;
-   font-size: 1em;
-   line-height: 1.75em;
-   max-width: 50%;
-   margin-bottom: 1.25em;
+
+.text-top p {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: normal;
+  font-size: 1em;
+  line-height: 1.75em;
+  max-width: 50%;
+  margin-bottom: 1.25em;
 }
-.button-play{
-   background-color: rgba(255, 255, 255, 0.178);
-   border: none;
-   border-radius: 0.31em;
-   padding: 0.3em;
-   color: white;
-   margin-right: 1.25em;
-   cursor: pointer;
-   transition: .3s ease all;
-   font-size: 1.12em;
+
+.button-play {
+  background-color: rgba(255, 255, 255, 0.178);
+  border: none;
+  border-radius: 0.31em;
+  padding: 0.3em;
+  color: white;
+  margin-right: 1.25em;
+  cursor: pointer;
+  transition: .3s ease all;
+  font-size: 1.12em;
 }
-.button-play:hover{
-   background: rgba(0, 0, 0, 0.548);
+
+.button-play:hover {
+  background: rgba(0, 0, 0, 0.548);
 }
+
 /* ------------ Trailer y Modal Portada ------------ */
-.modal-header h1{
-   color: white;
+.modal-header h1 {
+  color: white;
 }
-.trailer-video{
-   width: 100%;
-   height: 650px;
+
+.trailer-video {
+  width: 100%;
+  height: 650px;
 }
 
 /* FIN COVER */
-/* VICKY */
 /* -------------------- SUBTITULO FUERA DE LA PORTADA -------------------*/
-.last-launch{
+.last-launch {
   color: rgb(248, 237, 227);
   width: 95%;
   margin: auto;
@@ -156,14 +148,15 @@ header {
 }
 
 /* -------------------- CONTENEDOR DE TITULOS ---------------*/
-.container-title h4{
+.container-title h4 {
   color: rgb(248, 237, 227);
   font-size: 20px;
   width: 95%;
   margin: auto;
-  
 }
-.indicators button{                 /* estos son los que estan con javascript */
+
+.indicators button {
+  /* estos son los que estan con javascript */
   background: rgb(248, 237, 227);
   height: 3px;
   width: 10px;
@@ -173,20 +166,23 @@ header {
 }
 
 /*------------------------- COMIENZA EL SLIDER DE LAS PELICULAS - CONTENEDOR PRINCIPAL Y FLECHAS ------------------------*/
-.main-container{
+.main-container {
   width: 95%;
   margin: auto;
   margin-bottom: 70px;
 }
-.main-container-slider{
+
+.main-container-slider {
   display: flex;
   align-items: center;
   position: relative;
 }
-.left-arrow, .right-arrow{
+
+.left-arrow,
+.right-arrow {
   position: absolute;
   border: none;
-  background-color: rgba(0,0,0,0.3);
+  background-color: rgba(0, 0, 0, 0.3);
   font-size: 40px;
   height: 50%;
   width: 50px;
@@ -194,60 +190,65 @@ header {
   line-height: 40px;
   color: rgb(248, 237, 227);
   cursor: pointer;
-  z-index: 1;    /* es para que quede por arriba de las imagenes  */
+  z-index: 1;
+  /* es para que quede por arriba de las imagenes  */
   transition: .2s ease all;
 }
-.left-arrow:hover, .right-arrow:hover{
+
+.left-arrow:hover,
+.right-arrow:hover {
   background-color: rgba(212, 208, 208, 0.322);
 }
-.left-arrow{
+
+.left-arrow {
   left: 0;
 }
-.right-arrow{
+
+.right-arrow {
   right: 0;
 }
 
 /* --------------------- CONTENEDOR DEL SLIDER/CAROUSEL DE PELICULAS ---------------------------*/
-.container-slider{
+.container-slider {
   width: 100%;
   padding: 10px 0;
   overflow: hidden;
-  scroll-behavior: smooth;     /* para evitar que la pantalla suba para arriba al hacer click en las imagenes */
+  scroll-behavior: smooth;
+  /* para evitar que la pantalla suba para arriba al hacer click en las imagenes */
 }
-.container-slider2{
+
+.container-slider2 {
   width: 100%;
   padding: 10px 0;
   overflow: hidden;
-  scroll-behavior: smooth;     /* para evitar que la pantalla suba para arriba al hacer click en las imagenes */
+  scroll-behavior: smooth;
+  /* para evitar que la pantalla suba para arriba al hacer click en las imagenes */
 }
-.slider{
+
+.slider {
   display: flex;
   flex-wrap: nowrap;
 }
-.movie{
+
+.movie {
   padding: 3px;
   min-width: 20%;
   transition: .2s ease all;
-  box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
   position: relative;
   cursor: pointer;
-  /* SIII O SIIIII */
-  /* height: 600px; */
-  /* width: 100%; */
-  /* pointer-events: none; */
   max-height: 570px;
   max-width: 350px;
-  
-}   
-.movie img{
+}
 
+.movie img {
   width: 100%;
   height: 94%;
-  vertical-align: top; 
+  vertical-align: top;
   transition: all 500ms ease-out;
-  
-} 
-.moviesDescription{
+}
+
+.moviesDescription {
   display: none;
   position: absolute;
   top: 0;
@@ -259,14 +260,14 @@ header {
   padding: 20px;
   font-family: 'Open Sans', sans-serif;
   font-size: 12px;
-  
 }
-.movie:hover .moviesDescription{
+
+.movie:hover .moviesDescription {
   display: block;
 }
 
 /* --------------------------- BOTON DE VER TRAILERS DE CADA PELICULA -------------------------------------------- */
-.trailerMovie{
+.trailerMovie {
   position: relative;
   display: flex;
   justify-content: center;
@@ -280,16 +281,12 @@ header {
   pointer-events: visible;
   transition: .3s ease all;
   font-size: 1.12em;
-  
 }
-.trailerMovie:hover{
+
+.trailerMovie:hover {
   background: rgba(0, 0, 0, 0.548);
-  color: rgb(248, 237, 227);    
-} 
-
-/*FIN VICKY */
-
-
+  color: rgb(248, 237, 227);
+}
 
 /* AQUI COMIENZA FOOTER */
 footer {
@@ -362,94 +359,101 @@ footer {
 
 /* AQUI TERMINA FOOTER */
 
-
-
-
-@media (max-width: 991px){
-  .nav-item{
+@media (max-width: 991px) {
+  .nav-item {
     background-color: rgb(39, 39, 39);
     padding: 10px;
     border: 1px solid grey;
-    /* margin-left: 5px; */
   }
-
 }
-
-
-
 
 /* RESPONSIVE COVER */
 @media screen and (max-width: 800px) {
-  .principal-movie{
-      font-size: 8px;
+  .principal-movie {
+    font-size: 8px;
   }
-  .text-top p{
-      max-width: 90%;
-  } 
 
-   /* ---- EN VEZ DE HACER RESPONSIVE EL CAROUSEL LO TRANSFORME A UNA GRID CON TODAS LAS OMAGENES DESPLEGADAS */
-   .container-slider{
+  .text-top p {
+    max-width: 90%;
+  }
+
+  /* ---- EN VEZ DE HACER RESPONSIVE EL CAROUSEL LO TRANSFORME A UNA GRID CON TODAS LAS OMAGENES DESPLEGADAS */
+  .container-slider {
     overflow: visible;
-}
-.slider{
+  }
+
+  .slider {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-}
-.indicators, .left-arrow, .right-arrow{
+  }
+
+  .indicators,
+  .left-arrow,
+  .right-arrow {
     display: none;
-} 
-.moviesDescription{
-    font-size: 7px;  
-}
-}
-@media screen and (max-width: 2000px) {
-.moviesDescription{
-    font-size: 18px;      
-}
-}
-@media screen and (min-width: 2000px) {
-.moviesDescription{
-    font-size: 18px;      
-}
-}
-@media screen and (max-width: 1450px) {
-.moviesDescription{
-    font-size: 16px;      
-}
-}
-@media screen and (max-width: 1300px) {
-.moviesDescription{
-    font-size: 12px;      
-}
-}
-@media screen and (max-width: 1000px) {
-.moviesDescription{
-    font-size: 10px;      
-}
-}
-@media screen and (max-width: 550px) {
-.moviesDescription{
-    font-size: 7px;    
-}
-.trailerMovie{
-    font-size: 12px;
-}
-}
-@media screen and (max-width: 400px) {
-.moviesDescription{
-    font-size: 5px;    
-}
-}
-@media screen and (max-width: 300px) {
-.moviesDescription{
-    font-size: 3px;    
-}
-.trailerMovie{
-    font-size: 12px;
-}
+  }
+
+  .moviesDescription {
+    font-size: 7px;
+  }
 }
 
+@media screen and (max-width: 2000px) {
+  .moviesDescription {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .moviesDescription {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 1450px) {
+  .moviesDescription {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .moviesDescription {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .moviesDescription {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .moviesDescription {
+    font-size: 7px;
+  }
+
+  .trailerMovie {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .moviesDescription {
+    font-size: 5px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .moviesDescription {
+    font-size: 3px;
+  }
+
+  .trailerMovie {
+    font-size: 12px;
+  }
+}
 
 /* AQUI COMIENZA RESPONSIVE FOOTER */
 @media (max-width: 768px) {

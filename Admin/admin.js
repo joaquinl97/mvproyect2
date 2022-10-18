@@ -1,36 +1,17 @@
-let exitButton = document.getElementById('exitButton');
-let getUsers = JSON.parse(localStorage.getItem('users')) || [];
-let user = getUsers.find((item) => item.sesion === true) || null;
-
 let filmNameAdmin = document.getElementById("filmNameAdmin");
 let optionsAdmin = document.getElementById("optionsAdmin");
 let descriptionAdmin = document.getElementById("descriptionAdmin");
-
 let imageAdmin = document.getElementById("imageAdmin");
 let videoAdmin = document.getElementById("videoAdmin");
-
-
 let publicadaInput = document.getElementById("publicadaInput");
-// const publicada=publicadaInput.checked;
 let destacadaInput = document.getElementById("destacadaInput");
-// const destacada=destacadaInput.checked;
-
 let buttonSaveAdmin = document.getElementById("buttonSaveAdmin");
 let viewMoviesAdmin = document.getElementById("viewMoviesAdmin");
-
 let cover = document.getElementById("cover");
-
-
-
 let movies = JSON.parse(localStorage.getItem('movies')) || [];
-
-
 publicadaInput.checked == true
-// destacadaInput.checked == true
 //Create
 buttonSaveAdmin.addEventListener("click", () => {
-
-
     if (filmNameAdmin.value != "" && optionsAdmin.value != "" && descriptionAdmin.value != "") {
         movies.push({
             id: Math.round(Math.random() * 1000000),
@@ -50,18 +31,12 @@ buttonSaveAdmin.addEventListener("click", () => {
         imageAdmin.value = '';
         videoAdmin.value = '';
         publicadaInput.checked = false;
-        // destacadaInput.checked = false;
         cover.value = '';
         readFunction()
-
-
-
-
     } else {
         alert('Completar campos')
     }
 })
-
 //Read
 const readFunction = () => {
     movies = JSON.parse(localStorage.getItem('movies')) || [];
@@ -73,11 +48,9 @@ const readFunction = () => {
               <td>${item.filmNameAdmin}</td>
               <td>${item.optionsAdmin}</td>
               <td>
-
                 <div class="adminOverflow">
                   ${item.descriptionAdmin}
                 </div>
-
               </td>
               <td>${item.publicadaInput == true ? 'SI' : 'NO'}</td>
               <td>${item.destacadaInput == true ? 'SI' : 'NO'}</td>
@@ -93,14 +66,12 @@ const readFunction = () => {
     viewMoviesAdmin.innerHTML = showMovies.join('')
 }
 readFunction()
-
 //Update
 let filmNameAdminUpdate = document.getElementById("filmNameAdminUpdate");
 let optionsAdminUpdate = document.getElementById("optionsAdminUpdate");
 let descriptionAdminUpdate = document.getElementById("descriptionAdminUpdate");
 let imageAdminUpdate = document.getElementById("imageAdminUpdate");
 let videoAdminUpdate = document.getElementById("videoAdminUpdate");
-
 let publicadaInputUpdate = document.getElementById("publicadaInputUpdate");
 let destacadaInputUpdate = document.getElementById("destacadaInputUpdate");
 let coverUpdate = document.getElementById("coverUpdate");
@@ -118,11 +89,9 @@ const viewUpdate = (id) => {
             publicadaInputUpdate.checked = item.publicadaInput
             destacadaInputUpdate.checked = item.destacadaInput
             coverUpdate.value = item.cover
-
         }
     })
 }
-
 const updateFunction = () => {
     let updateFunction = [];
     movies.map((item) => {
@@ -135,30 +104,19 @@ const updateFunction = () => {
                 imageAdmin: imageAdminUpdate.value,
                 videoAdmin: videoAdminUpdate.value,
                 publicadaInput: publicadaInputUpdate.checked,
-
                 cover: coverUpdate.value,
             })
-
         }
         else {
-            // updateFunction.push(item)
-
-
             updateFunction.push({
                 ...item,
-
             })
-
         }
-
     })
     localStorage.setItem('movies', JSON.stringify(updateFunction))
     movies = JSON.parse(localStorage.getItem('movies')) || [];
     readFunction()
-
-
 }
-
 const favFunction = () => {
     let favFunction = [];
     movies.map((item) => {
@@ -174,99 +132,42 @@ const favFunction = () => {
                 destacadaInput: false,
             })
         }
-
     })
     localStorage.setItem('movies', JSON.stringify(favFunction))
     movies = JSON.parse(localStorage.getItem('movies')) || [];
     readFunction()
-
-
 }
-
-
-// function fav() {
-//     movies = JSON.parse(localStorage.getItem('movies')) || [];
-//     let fav=[]
-//     for (let i = 0; i < movies.length; i++) {
-
-//         if (movies[i].destacadaInput== true) {
-//             fav.push({
-
-//                 destacadaInput:true,
-//             })
-//         } else {
-//             fav.push({
-
-//                 destacadaInput:false,
-//             })
-
-//         }
-
-
-//     }
-//     localStorage.setItem('movies', JSON.stringify(fav))
-
-//     readFunction()
-// }
-
-// function fav() {
-//     let fac=[]
-//     movies.map((item) =>{
-//         if (condition) {
-
-//         }
-
-//     })
-
-// }
-
-
-
-
 //Delete
-
 const deleteFunction = (id) => {
     let deleteFunction = []
     movies.map((item) => {
         if (id != item.id) {
             deleteFunction.push(item)
-
         }
     })
     localStorage.setItem('movies', JSON.stringify(deleteFunction))
     movies = JSON.parse(localStorage.getItem('movies')) || []
     readFunction()
 }
-
-
-//A continuacion se presenta la funcion Filter que permite buscar en tiempo real las notas almacenadas.
-
+//A continuacion se presenta la funcion Filter que permite buscar en tiempo real las peliculas almacenadas.
 let searchMovie = document.getElementById('searchMovie')
-// let boton = document.getElementById('boton') 
-let result= document.getElementById('viewMoviesAdmin')
-
+let result = document.getElementById('viewMoviesAdmin')
 function Filter() {
     let movies = JSON.parse(localStorage.getItem('movies'))
-
-
-    result.innerHTML =''
-    let text=searchMovie.value.toLowerCase()
-
+    result.innerHTML = ''
+    let text = searchMovie.value.toLowerCase()
     for (let i = 0; i < movies.length; i++) {
-        let movie=movies[i].filmNameAdmin.toLowerCase()
-
-        if (movie.indexOf(text)!==-1) {
-            result.innerHTML+=(`
+        let movie = movies[i].filmNameAdmin.toLowerCase()
+        if (movie.indexOf(text) !== -1) {
+            result.innerHTML += (`
             <tr class="rowAdmin ${movies[i].destacadaInput == true ? 'highlighted text-dark' : 'tableBody'}   ">
               <th scope="row">${movies[i].id}</th>
               <td>${movies[i].filmNameAdmin}</td>
               <td>${movies[i].optionsAdmin}</td>
               <td>
-
                 <div class="adminOverflow">
                   ${movies[i].descriptionAdmin}
                 </div>
-
               </td>
               <td>${movies[i].publicadaInput == true ? 'SI' : 'NO'}</td>
               <td>${movies[i].destacadaInput == true ? 'SI' : 'NO'}</td>
@@ -277,49 +178,31 @@ function Filter() {
                     alt=""></button>
               </td>
             </tr>
-
-
-
-
-
-
-
-
-            
-            `
-        )} 
-
-        
+            `)
+        }
     }
     if (result.innerHTML === '') {
-        result.innerHTML+=(`
+        result.innerHTML += (`
         <p>Pelicula no encontrada...</p>
-        `
-        
-    )} else {
-        
+        `)
+    } else {
     }
-
-    
 }
-
-// boton.addEventListener('click',Filter)
-searchMovie.addEventListener('keyup',Filter)
-
+searchMovie.addEventListener('keyup', Filter)
 Filter()
-
-
+// PARA CERRAR SESION DESDE EL ADMIN:
+let exitButton = document.getElementById('exitButton');
+let getUsers = JSON.parse(localStorage.getItem('users')) || [];
+let user = getUsers.find((item) => item.sesion === true) || null;
 exitButton.addEventListener('click', () => {
     ExitSesion()
-  })
-  
-  function SessionSeVence() {
-    setTimeout(() => {
-        ExitSesion()
-    }, 120000);
-  }
-  
-  function ExitSesion() {
+})
+// function SessionSeVence() {
+//     setTimeout(() => {
+//         ExitSesion()
+//     }, 120000);
+// }
+function ExitSesion() {
     let response = getUsers.map((item) => {
         if (item.id === user.id) {
             let myUser = {
@@ -333,4 +216,4 @@ exitButton.addEventListener('click', () => {
     })
     localStorage.setItem('users', JSON.stringify(response));
     window.location.href = '/presentation/login/login.html';
-  }
+}
