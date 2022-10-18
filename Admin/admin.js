@@ -1,3 +1,10 @@
+const users=JSON.parse(localStorage.getItem('users'));
+const userLogged=users.find(user=>user.sesion===true);
+if (!userLogged.isAdmin) {
+    window.location.assign(window.location.origin+'/index.html');
+    
+}
+
 let filmNameAdmin = document.getElementById("filmNameAdmin");
 let optionsAdmin = document.getElementById("optionsAdmin");
 let descriptionAdmin = document.getElementById("descriptionAdmin");
