@@ -273,6 +273,6 @@ function ExitSesion() {
     }
   })
   localStorage.setItem('users', JSON.stringify(response));
-  window.location.href = '/presentation/login/login.html';
+  window.location.href = '/landing-page/login/login.html';
 }
 Main()
